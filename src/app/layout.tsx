@@ -1,12 +1,12 @@
 // These styles apply to every route in the application
 import "./globals.css";
-import FlyonuiScript from "./components/FlyonuiScript";
-import NavBar from "./components/NavBar";
+import FlyonuiScript from "./components/common/FlyonuiScript";
+import NavBar from "./components/common/NavBar";
 import type { Metadata } from "next";
 import { DENTAL_NAME } from "@/lib/constants";
-import GoogleMap from "./components/google-map";
-import Footer from "./components/footer";
-import InstagramFeed from "./components/InstagramFeed";
+import GoogleMap from "./components/common/google-map";
+import Footer from "./components/common/footer";
+import InstagramFeed from "./components/common/InstagramFeed";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages

@@ -1,6 +1,6 @@
 import styles from "../conference.module.css";
 import type { Metadata } from "next";
-import AccordionGroup from "../../components/AccordionGroup"; // Adjust the path as needed
+import AccordionGroup from "../../components/posts/AccordionGroup"; // Adjust the path as needed
 
 export const metadata: Metadata = {
   title: "Teeth Straightening",

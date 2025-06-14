@@ -1,5 +1,5 @@
-import Avatar from "@/app/components/avatar";
-import CoverImage from "@/app/components/cover-image";
+import Avatar from "@/app/components/posts/avatar";
+import CoverImage from "@/app/components/posts/cover-image";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";

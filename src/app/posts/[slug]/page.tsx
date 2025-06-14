@@ -3,11 +3,10 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
-import Alert from "@/app/components/alert";
-import Container from "@/app/components/container";
-import Header from "@/app/components/header";
-import { PostBody } from "@/app/components/post-body";
-import { PostHeader } from "@/app/components/post-header";
+import Container from "@/app/components/posts/container";
+import Header from "@/app/components/posts/header";
+import { PostBody } from "@/app/components/posts/post-body";
+import { PostHeader } from "@/app/components/posts/post-header";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -21,7 +20,6 @@ export default async function Post(props: Params) {
 
   return (
     <main>
-      <Alert preview={post.preview} />
       <Container>
         <Header />
         <article className="mb-32">
