@@ -7,6 +7,7 @@ import { DENTAL_NAME } from "@/lib/constants";
 import GoogleMap from "./components/common/google-map";
 import Footer from "./components/common/footer";
 import InstagramFeed from "./components/common/InstagramFeed";
+import Contact from "./components/common/Contact";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -43,16 +44,8 @@ export default function RootLayout({
       <head></head>
       <body className="min-h-screen bg-base-200">
         <NavBar />
-        <div className="p-6">{children}</div>
-        <div className="px-8 grid grid-cols-1 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
-          <InstagramFeed />
-        </div>
-
-        <div className="px-8 grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
-          <div>Info Section</div>
-          <GoogleMap />
-        </div>
-
+        <div className="px-4 lg:px-8">{children}</div>
+        <Contact />
         <Footer />
       </body>
       <FlyonuiScript />
