@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import GoogleMap from './google-map'
 

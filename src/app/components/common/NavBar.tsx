@@ -1,19 +1,35 @@
+import { Phone } from "lucide-react";
 import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="navbar shadow">
-      <div className="navbar-start">
-        <Link
-          className="link text-base-content/90 link-neutral text-xl font-semibold no-underline"
-          href="/"
-        >
-          DENTAL
-        </Link>
-      </div>
-
-      <div className="navbar-center max-sm:hidden">
-        <ul className="menu menu-horizontal gap-2 p-0 text-base rtl:ml-20">
+    <>
+      <nav className="navbar rounded-t-box gap-4" role="navigation" aria-label="main navigation" style={{ backgroundColor: "#F6F1E9E5" }}>
+        <div className="navbar-start items-center">
+          <Link
+            className="link text-base-content link-neutral text-xl font-bold no-underline"
+            href="#"
+          >
+           <img src="/assets/images/logo.png" alt="Logo" width={150} height={50} className="h-8 md:h-10" />
+          </Link>
+        </div>
+        <div className="navbar-end flex items-center gap-4">
+        <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+18327625635"
+              className="flex items-center btn-secondary text-sm"
+            >
+              <Phone className="mr-2 h-4 w-4" />
+              CALL (832) 762-5635
+            </a>
+            <Link href="#contact" className="btn-primary text-sm">
+              PLAN YOUR VISIT
+            </Link>
+          </div>
+        </div>
+      </nav>
+      <div className="navbar-end bg-base-100 flex w-full items-right" style={{ backgroundColor: "#F6F1E9E5"! }}>
+        <ul className="menu menu-horizontal gap-2 text-base"style={{ backgroundColor: "#F6F1E9E5"! }}>
           <li>
             <Link href={"/bio/doctors/arora"}>OUR STAFF</Link>
           </li>
@@ -140,6 +156,6 @@ export default function NavBar() {
           </li>
         </ul>
       </div>
-    </nav>
+    </>
   );
 }

@@ -4,9 +4,7 @@ import FlyonuiScript from "./components/common/FlyonuiScript";
 import NavBar from "./components/common/NavBar";
 import type { Metadata } from "next";
 import { DENTAL_NAME } from "@/lib/constants";
-import GoogleMap from "./components/common/google-map";
 import Footer from "./components/common/footer";
-import InstagramFeed from "./components/common/InstagramFeed";
 import Contact from "./components/common/Contact";
 
 // This metadata is used for the entire application
