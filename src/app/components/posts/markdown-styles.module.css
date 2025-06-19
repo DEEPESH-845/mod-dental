@@ -1,5 +1,7 @@
+
+@import "tailwindcss";
 .markdown {
-  @apply leading-relaxed;
+  @apply text-lg leading-relaxed;
 }
 
 .markdown p,
