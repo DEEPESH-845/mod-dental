@@ -1,33 +1,28 @@
-import Image from "next/image";
-import ourStoryPic from "../images/Hero-Image-New1-p-2000.webp"
-import styles from "./home.module.css";
+import type { Metadata } from "next";
+import About from "../components/home/About";
+import Doctors from "../components/home/Doctors";
+import Features from "../components/home/Features";
+import Gallery from "../components/home/Gallery";
+import Hero from "../components/home/Hero";
+import Services from "../components/home/Services";
+import Testimonials from "../components/home/Testimonials";
+import InstagramFeed from "../components/common/InstagramFeed";
 
-import type { Metadata } from 'next'
- 
 export const metadata: Metadata = {
-  title: 'Home',
-}
+  title: "Home",
+};
 
 export default function Page() {
   return (
     <>
-      <div className={styles.bgWrap}>
-        <Image
-          src={ourStoryPic}
-          alt="Out story pic"
-          placeholder="blur"
-          quality={100}
-          sizes="90vw"
-          fill
-          style={{
-            objectFit: "cover",
-          }}
-        />
-      </div>
-      <h1 className={styles.bgHeader}>We care about your smile</h1>
-      <p className={styles.bgText}>
-      Our experienced team offers a range of services in a friendly atmosphere, ensuring your dental health is our top priority.
-      </p>
+      <Hero />
+      <About />
+      <Doctors />
+      <Services />
+      <Features />
+      <Gallery />
+      <InstagramFeed />
+      <Testimonials />
     </>
   );
 }
