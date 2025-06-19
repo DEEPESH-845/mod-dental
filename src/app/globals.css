@@ -1,6 +1,53 @@
 @import "tailwindcss";
+
+@import "flyonui/variants.css";
+
 @plugin "flyonui"{
     themes: all;
 }
-@import "flyonui/variants.css";
 @source "../../node_modules/flyonui/flyonui.js";
+
+@theme {
+    --color-dental-green: #2C4F3C;
+    --color-dental-cream: #F3EFE9; 
+    --color-dental-gold: ##B6A66A; 
+  }
+
+  @layer utilities {
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+@layer components {
+    .btn-primary {
+      @apply bg-dental-green hover:bg-dental-green/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-200 hover:shadow-lg;
+    }
+    
+    .btn-secondary {
+      @apply border border-dental-green text-dental-green hover:bg-dental-green hover:text-white font-medium py-3 px-6 rounded-md transition-all duration-200;
+    }
+    
+    .section-padding {
+      @apply py-16 px-4 sm:px-6 lg:px-8;
+    }
+    
+    .container-custom {
+      @apply max-w-7xl mx-auto;
+    }
+    
+    .text-shadow {
+      text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.33);
+    }
+    
+    .text-shadow-strong {
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.68);
+    }
+  }
