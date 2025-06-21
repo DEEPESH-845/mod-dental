@@ -69,7 +69,7 @@ export default function About() {
           <div className="col-span-6 relative">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/office2.jpg"
+                src="/assets/images/office-pic2.jpg"
                 alt="Modern dental office interior"
                 fill
                 className="object-cover"
@@ -79,7 +79,7 @@ export default function About() {
           <div className="col-span-2">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/office3.jpg"
+                src="/assets/images/office-pic3.jpg"
                 alt="Modern dental office interior"
                 fill
                 className="object-cover"
@@ -89,7 +89,7 @@ export default function About() {
           <div className="col-span-4">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/assets/images/office4.jpg"
+                src="/assets/images/office-pic4.jpg"
                 alt="Modern dental office interior"
                 fill
                 className="object-cover"
