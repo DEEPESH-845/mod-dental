@@ -1,5 +1,5 @@
 export const EXAMPLE_PATH = "blog-starter";
-export const DENTAL_NAME = "Detntal Name";
+export const DENTAL_NAME = "MODE DENTAL";
 export const DENTAL_DESCRIPTION =
   "Explore our dentistry services to enhance your smile and boost your confidence.";
 export const DNS ="https://dental.example.com";
