@@ -15,17 +15,16 @@ export default async function sitemap() {
   const pages = await globby([
     "src/**/*{.js,jsx,ts,tsx,.mdx}",
     "!src/../*.js",
-    "!src/app/{sitemap,layout,head,robots,manifest}.{js,jsx,ts,tsx}",
+    "!src/app/{sitemap,layout,head,robots,manifest,not-found}.{js,jsx,ts,tsx}",
     "!src/api/*",
     "!src/interfaces/*",
     "!src/lib/*",
-    "!src/app/components/*",
+    "!src/app/components/**/*{.js,jsx,ts,tsx,.mdx}",
     "!src/scripts/*",
     "!src/app/(api|auth|private)/**",
     "!src/app/(dashboard|admin)/**",
     '!src/app/posts/[slug]/page.tsx',
     '!src/app/bio/doctors/[slug]/page.tsx'
-
   ]);
 
   const allPosts = getAllPosts();
