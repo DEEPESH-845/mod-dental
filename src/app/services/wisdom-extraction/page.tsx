@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@dental',
     creator: '@dental',
-    images: ['https://dental.com/images/wisdom-extraction.jpg']
+    images: ['https://mod-dental.com/images/wisdom-extraction.jpg']
   }
 }
 

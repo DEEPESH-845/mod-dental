@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-dental-cream/95 backdrop-blur-md border-b border-dental-green/10">
+      <header className="sticky top-0 left-0 right-0 z-50 bg-dental-cream/95 backdrop-blur-md border-b border-dental-green/10">
         <div className="container-custom">
           <nav
             className="navbar rounded-t-box gap-4"

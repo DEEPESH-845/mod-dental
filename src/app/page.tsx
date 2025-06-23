@@ -9,7 +9,7 @@ import Services from "./components/home/Services";
 import Testimonials from "./components/home/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home | MOD DENTAL",
 };
 
 export default function Page() {

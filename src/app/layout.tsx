@@ -2,8 +2,7 @@
 import "./globals.css";
 import FlyonuiScript from "./components/common/FlyonuiScript";
 import NavBar from "./components/common/NavBar";
-import type { Metadata } from "next";
-import { DENTAL_NAME } from "@/lib/constants";
+import type { Metadata } from "next"
 import Footer from "./components/common/footer";
 import Contact from "./components/common/Contact";
 
@@ -13,11 +12,11 @@ import Contact from "./components/common/Contact";
 // which will override the default metadata defined here
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${DENTAL_NAME}`,
-    default: `${DENTAL_NAME}`, // a default is required when creating a template
+    default: "MOD DENTAL",
+    template: "%s | MOD DENTAL",
   },
   description:
-    "Explore our  dentistry services to enhance your smile and boost your confidence.",
+    "MOD DENTAL is a premier dental clinic specializing in smile enhancement and dental aesthetics. Our expert team provides personalized care to help you achieve the perfect smile.",
   keywords: [" dentistry", "smile enhancement", "dental aesthetics"],
   robots: {
     index: true,
@@ -29,6 +28,23 @@ export const metadata: Metadata = {
   icons: {
     icon: "/public/favicon/favicon.ico",
     shortcut: "/public/favicon/favicon-16x16.png",
+  },
+   openGraph: {
+    type: "website",
+    url: "https://mod-dental.com",
+    title: "MOD DENTAL",
+    locale: "en_US",
+    description:
+      "MOD DENTAL is a premier dental clinic specializing in smile enhancement and dental aesthetics. Our expert team provides personalized care to help you achieve the perfect smile.",
+    images: [
+      {
+        url: "/public/images/logo.png",
+        width: 500,
+        height: 500,
+        alt: "MOD Dental Logo",
+      },
+    ],
+    siteName: "MOD DENTAL"
   },
 };
 
@@ -42,7 +58,7 @@ export default function RootLayout({
       <head></head>
       <body className="min-h-screen bg-base-200">
         <NavBar />
-        <div className="px-4 lg:px-8">{children}</div>
+        <div className="relative px-4 lg:px-8">{children}</div>
         <Contact />
         <Footer />
       </body>
