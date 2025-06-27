@@ -1,46 +1,57 @@
-import Link from "next/link";
+"use client";
 
-export default function Hero() {
-  return (
-    <>
-      <section className="relative h-screen flex items-center justify-center overflow-hidden sm:p-6 lg:p-8 ">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            preload="auto"
-            muted
-            className="w-full h-full object-cover"
-          >
-            <source src="/assets/video/skyline.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+import { useRef, useEffect } from "react";
+import { Button } from "@/app/components/home/ui/Button";
 
-        {/* Content */}
-        <div className="absolute z-10 absolute inset-x-0 bottom-0  text-center max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-light text-white mb-6 text-shadow font-raleway animate-fade-in">
-            Dentistry, Reinvented For You
-          </h1>
 
-          <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-12 max-w-4xl mx-auto text-shadow-strong font-light leading-relaxed animate-slide-up">
-            At Mod Dentist, we&apos;ve reimagined dental care around your
-            comfort, convenience, and confidence.
-            <br className="hidden sm:block" />
-            This is dentistry reinvented—modern, transparent, and truly made for
-            you.
-          </p>
-        </div>
-      </section>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
-        <Link href="#contact" className="btn-primary text-center">
-          REQUEST AN APPOINTMENT
-        </Link>
-        <Link href="tel:+18327625635" className="btn-secondary text-center">
-          CALL +1 (832) 762‑5635
-        </Link>
-      </div>
-    </>
-  );
+
+export default function HeroSection() {
+	const videoRef = useRef<HTMLVideoElement>(null);
+
+	useEffect(() => {
+		// Since we don't have an actual video file, we'll use the static image
+		// In a real implementation, you would set up the video element here
+	}, []);
+
+	return (
+		<section className="relative h-screen flex items-end justify-center overflow-hidden">
+			{/* Hero Content */}
+			<div className="relative z-10 text-center pb-52 px-4 sm:px-6 lg:px-8 mx-auto hero-content">
+				<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-8 leading-tight hero-text">
+					Dentistry Reinvented For You
+				</h1>
+				<div className="max-w-4xl mx-auto">
+					<p className="text-lg sm:text-xl md:text-2xl text-white font-light leading-relaxed mb-4">
+						At Mod Dentist, we&apos;ve reimagined dental care around your
+						comfort, convenience, and confidence.
+					</p>
+					<p className="text-lg sm:text-xl md:text-2xl text-white font-light leading-relaxed">
+						This is dentistry reinvented—modern, transparent, and truly
+						made for you.
+					</p>
+				</div>
+			</div>
+
+			{/* Video element (hidden, for future implementation) */}
+			<video
+				ref={videoRef}
+				className="absolute inset-0 w-full h-full object-cover"
+				muted
+				playsInline
+				loop
+				autoPlay
+				preload="metadata"
+			>
+				{/* Video source would go here when available */}
+				<source
+					src="/assets/video/hero-video.mp4"
+					type="video/mp4"
+				/>
+			</video>
+      
+		</section>
+    
+    
+	);
+    
 }
