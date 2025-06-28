@@ -7,6 +7,10 @@ import Features from "./components/home/Features";
 import Gallery from "./components/home/Gallery";
 import Services from "./components/home/Services";
 import Testimonials from "./components/home/Testimonials";
+import BespokeDentalStudio from "./components/home/DiagnosticPrevention";
+import NavBar from "./components/common/NavBar";
+import GetInTouch from "./components/home/GetInTouch";
+
 
 export const metadata: Metadata = {
   title: "Home | MOD DENTAL",
@@ -15,8 +19,9 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+     
       <Hero />
-      <About />
+      <BespokeDentalStudio/>
       <Doctors />
       <Services />
       <Features />

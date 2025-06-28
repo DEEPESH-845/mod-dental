@@ -3,8 +3,11 @@ import "./globals.css";
 import FlyonuiScript from "./components/common/FlyonuiScript";
 import NavBar from "./components/common/NavBar";
 import type { Metadata } from "next"
-import Footer from "./components/common/footer";
+import Footer from "./components/home/Footer";
 import Contact from "./components/common/Contact";
+import GetInTouch from "./components/home/GetInTouch";
+import Navbar from "./components/common/NavBar";
+import HeroAppointmentSectionButton from "./components/common/Appointment-Button";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -56,11 +59,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className="min-h-screen bg-base-200">
-        <NavBar />
-        <div className="relative px-4 lg:px-8">{children}</div>
-        <Contact />
-        <Footer />
+      <body className="bg-base-200 overflow-x-hidden min-h-screen">
+         <Navbar/>
+        <div className="relative">{children}</div>
+        <GetInTouch/>
+        <Footer/>
       </body>
       <FlyonuiScript />
     </html>
