@@ -1,9 +1,6 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { Button } from "@/app/components/home/ui/Button";
-
-
 
 export default function HeroSection() {
 	const videoRef = useRef<HTMLVideoElement>(null);

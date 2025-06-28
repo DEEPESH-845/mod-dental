@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, ArrowRight, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/app/components/home/ui/Button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/app/components/home/ui/sheet";
 
 import MOD_Logo from "@/../public/mod_dentist_logo.png";
 

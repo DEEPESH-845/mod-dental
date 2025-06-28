@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-@import "flyonui/variants.css";
-
-@plugin "flyonui"{
-    themes: all;
-}
-@source "../../node_modules/flyonui/flyonui.js";
-
 @theme {
     --color-dental-green: #2C4F3C;
     --color-dental-cream: #F3EFE9; 

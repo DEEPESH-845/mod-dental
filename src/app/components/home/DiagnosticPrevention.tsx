@@ -1,5 +1,4 @@
-import Image, { StaticImageData } from "next/image";
-import { Button } from "@/app/components/home/ui/Button";
+import Image from "next/image";
 import { libreBaskerville, poppins } from "@/lib/fonts";
 
 // Importing images

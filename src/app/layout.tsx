@@ -1,13 +1,9 @@
 // These styles apply to every route in the application
 import "./globals.css";
-import FlyonuiScript from "./components/common/FlyonuiScript";
-import NavBar from "./components/common/NavBar";
 import type { Metadata } from "next"
 import Footer from "./components/home/Footer";
-import Contact from "./components/common/Contact";
 import GetInTouch from "./components/home/GetInTouch";
 import Navbar from "./components/common/NavBar";
-import HeroAppointmentSectionButton from "./components/common/Appointment-Button";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -65,7 +61,6 @@ export default function RootLayout({
         <GetInTouch/>
         <Footer/>
       </body>
-      <FlyonuiScript />
     </html>
   );
 }

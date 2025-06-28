@@ -1,13 +1,7 @@
-"use client"
-
-
-import { Facebook, Instagram } from "lucide-react"
 import GoogleMap from "./GoogleMap"
 
 export default function GetInTouch() {
   // Replace with your actual Google Maps API key
-  const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-  const officeLocation = { lat: 29.7604, lng: -95.3698 }
 
   return (
     <div className="min-h-screen bg-[#F3EFE9]">

@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import GoogleMap from './google-map'
