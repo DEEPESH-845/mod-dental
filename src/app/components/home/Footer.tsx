@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Facebook, Instagram } from 'lucide-react'
 
 const navLinks = [
-  { name: 'OUR DOCTORS', href: '/doctors' },
+  { name: 'OUR DOCTORS', href: '/bio/doctors/dr-arora' },
   { name: 'MOD EXPERIENCE', href: '/experience' }, 
   { name: 'OUR STUDIO', href: '/studio' },
   { name: 'OUR SERVICES', href: '/services' },

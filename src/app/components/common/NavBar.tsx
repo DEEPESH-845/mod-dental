@@ -8,7 +8,7 @@ import { Button } from "@/app/components/home/ui/Button";
 import { Sheet, SheetContent, SheetTrigger } from "@/app/components/home/ui/sheet";
 
 const navigationItems = [
-	{ name: "OUR DOCTORS", href: "/doctors" },
+	{ name: "OUR DOCTORS", href: "/bio/doctors/dr-arora" },
 	{ name: "MOD EXPERIENCE", href: "/experience" },
 	{ name: "OUR STUDIO", href: "/studio" },
 	{ name: "OUR SERVICES", href: "/services" },
