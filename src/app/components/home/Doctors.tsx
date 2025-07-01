@@ -18,7 +18,6 @@ export default function Doctors() {
     <section id="doctors" className="py-20 bg-[#F6F1E9]">
             {/* Background Image */}
 
-      
       {/* Content Overlay */}
       <div className="relative z-10">
       <div className="container mx-auto px-4">
