@@ -1,7 +1,9 @@
+"use client"
+
+
 import GoogleMap from "./GoogleMap"
 
 export default function GetInTouch() {
-  // Replace with your actual Google Maps API key
 
   return (
     <div className="min-h-screen bg-[#F3EFE9]">

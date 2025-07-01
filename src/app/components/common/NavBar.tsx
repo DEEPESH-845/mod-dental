@@ -20,7 +20,7 @@ export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className="border-b border-gray-200 relative z-50 bg-[#F6F1E9E5]">
+		<header className="fixed top-0 left-0 right-0 z-50 bg-[#F6F1E9]/95 backdrop-blur-sm w-full border-b border-gray-200">
 			<div className=" mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center h-32 justify-between">
 					{/* Logo - Left side */}

@@ -4,32 +4,44 @@ const galleryImages = [
   {
     id: 1,
     src: '/assets/images/before-after1.jpg',
-    alt: 'Before and after smile transformation'
+    alt: 'Before and after smile transformation',
+    size: 'large' // Top left large image
   },
   {
     id: 2,
     src: '/assets/images/before-after2.jpg',
-    alt: 'Dental implant results'
+    alt: 'Dental implant results',
+    size: 'small' // Top right small
   },
   {
     id: 3,
     src: '/assets/images/before-after4.jpg',
-    alt: 'Cosmetic dentistry results'
+    alt: 'Cosmetic dentistry results',
+    size: 'medium' // Middle left medium
   },
   {
     id: 4,
     src: '/assets/images/before-after1.jpg',
-    alt: 'Teeth whitening transformation'
+    alt: 'Teeth whitening transformation',
+    size: 'medium' // Middle right medium
   },
   {
     id: 5,
     src: '/assets/images/before-after2.jpg',
-    alt: 'Cosmetic dentistry results'
+    alt: 'Bottom large image',
+    size: 'wide' // Bottom wide image
   },
   {
     id: 6,
     src: '/assets/images/before-after4.jpg',
-    alt: 'Teeth whitening transformation'
+    alt: 'Bottom small left',
+    size: 'small'
+  },
+  {
+    id: 7,
+    src: '/assets/images/before-after1.jpg',
+    alt: 'Bottom small right',
+    size: 'small'
   }
 ]
 
@@ -41,18 +53,18 @@ export default function Gallery() {
           {/* Content Side */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-4xl lg:text-5xl font-light text-dental-green font-raleway">
+              <h2 className="text-4xl lg:text-5xl font-light text-[#2C4F3C] font-raleway">
                 Where every
               </h2>
               <div className="text-4xl lg:text-5xl font-light">
-                <span className="text-dental-gold">Smile</span>{' '}
-                <span className="text-dental-green">Tells a</span>{' '}
-                <span className="text-dental-gold">Story</span>
+                <span className="text-[#B6A76A]">Smile</span>{' '}
+                <span className="text-[#2C4F3C] ">Tells a</span>{' '}
+                <span className="text-[#B6A76A]">Story</span>
               </div>
-              <div className="w-24 h-0.5 bg-dental-green" />
+              <div className="w-24 h-0.5 bg-[#2C4F3C]" />
             </div>
 
-            <p className="text-dental-dark/80 leading-relaxed text-lg">
+            <p className="text-[#3B3B3B] leading-relaxed text-lg">
               Take a peek at the beautiful smile transformations we&apos;ve created! 
               From subtle fixes to full makeovers, our gallery shows how we help real 
               people feel more confident every day. Each smile is a reminder of the care 
@@ -60,36 +72,94 @@ export default function Gallery() {
             </p>
 
             <div className="space-y-4">
-              <a href="#contact" className="block btn-primary text-center">
+              <a href="tel:+18327625635" className="block btn-primary text-center">
                 REQUEST AN APPOINTMENT
               </a>
-              <a href="tel:+18327625635" className="block btn-secondary text-center">
-                CALL +1 (832) 762‑5635
+              <a href="#"className="block btn-secondary text-center">
+                EXPLORE OUR STUDIO
               </a>
             </div>
           </div>
 
-          {/* Gallery Side */}
+          {/* Gallery Side - Custom Masonry Layout */}
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              {galleryImages.map((image, index) => (
-                <div
-                  key={image.id}
-                  className={`relative overflow-hidden rounded-lg ${
-                    index % 3 === 0 ? 'row-span-2' : ''
-                  }`}
-                >
-                  <div className="relative h-64 lg:h-80">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                </div>
-              ))}
+            <div className="grid grid-cols-4 grid-rows-6 gap-3 h-[600px] lg:h-[700px]">
+              {/* Top left - Large before/after face */}
+              <div className="col-span-2 row-span-3 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[0].src}
+                  alt={galleryImages[0].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Top right small */}
+              <div className="col-span-2 row-span-1 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[1].src}
+                  alt={galleryImages[1].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Middle right - Medium */}
+              <div className="col-span-2 row-span-2 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[2].src}
+                  alt={galleryImages[2].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Middle left - Medium */}
+              <div className="col-span-2 row-span-2 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[3].src}
+                  alt={galleryImages[3].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Bottom wide */}
+              <div className="col-span-2 row-span-1 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[4].src}
+                  alt={galleryImages[4].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Bottom small left */}
+              <div className="col-span-1 row-span-1 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[5].src}
+                  alt={galleryImages[5].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+
+              {/* Bottom small right */}
+              <div className="col-span-1 row-span-1 relative overflow-hidden rounded-lg">
+                <Image
+                  src={galleryImages[6].src}
+                  alt={galleryImages[6].alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dental-green/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+              </div>
             </div>
 
             {/* Gradient Overlays */}

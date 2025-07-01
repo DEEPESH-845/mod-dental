@@ -7,7 +7,7 @@ import { Menu, ArrowRight, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/app/components/home/ui/Button";
 import { Sheet, SheetContent, SheetTrigger } from "@/app/components/home/ui/sheet";
 
-import MOD_Logo from "@/../public/mod_dentist_logo.png";
+import MOD_Logo from "@/../public/assets/images/logo.png";
 
 const navigationItems = [
 	{ name: "OUR DOCTORS", href: "/bio/doctors/arora" },
@@ -22,7 +22,7 @@ export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<nav className="border-b border-gray-200 relative z-50 bg-[#F6F1E9E5]">
+		<nav className="fixed top-0 left-0 right-0 z-50 bg-[#F6F1E9]/95 backdrop-blur-sm w-full border-b border-gray-200">
 			<div className=" mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center h-32 justify-between">
 					{/* Logo - Left side */}
@@ -51,9 +51,9 @@ export default function Header() {
 								<Phone className="w-4 h-4 mr-2" />
 								CALL +1 (832) 762 5635
 							</Button>
-							<Button className="bg-[#2C4F3C] hover:bg-[#284836] text-white px-10j py-7 text-sm font-medium flex items-center gap-3">
-								PLAN YOUR VISIT{" "}
-							</Button>
+						    <Button className="bg-[#2C4F3C] hover:bg-[#284836] text-white px-10 py-7 text-sm font-medium">
+                                    PLAN YOUR VISIT
+                                </Button>
 								<span className="flex items-center justify-center rounded-full border border-[#2C4F3C] bg-transparent w-12 h-12 ml-2">
 									<ArrowRight className="w-6 h-6 text-[#2C4F3C]" />
 								</span>

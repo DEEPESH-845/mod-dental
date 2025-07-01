@@ -10,6 +10,7 @@ import Navbar from "./components/common/NavBar";
 // For example, the page at /home can have its own metadata
 // which will override the default metadata defined here
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mod-dental.com"),
   title: {
     default: "MOD DENTAL",
     template: "%s | MOD DENTAL",
@@ -53,9 +54,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning >
       <head></head>
-      <body className="bg-base-200 overflow-x-hidden min-h-screen">
+      <body className="bg-base-200 overflow-x-hidden min-h-screen pt-32">
          <Navbar/>
         <div className="relative">{children}</div>
         <GetInTouch/>
