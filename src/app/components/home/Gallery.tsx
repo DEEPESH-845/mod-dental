@@ -47,35 +47,42 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="section-padding bg-dental-cream">
+    <section id="gallery" className="section-padding bg-white">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content Side */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="space-y-8 text-center">
+            <div className="space-y-4 mr-6">
               <h2 className="text-4xl lg:text-5xl font-light text-[#2C4F3C] font-raleway">
                 Where every
               </h2>
-              <div className="text-4xl lg:text-5xl font-light">
-                <span className="text-[#B6A76A]">Smile</span>{' '}
-                <span className="text-[#2C4F3C] ">Tells a</span>{' '}
-                <span className="text-[#B6A76A]">Story</span>
+              <div className="text-4xl lg:text-5xl mb-12 font-light">
+                <span className="text-[#B6A66A]">Smile</span>{" "}
+                <span className="text-[#2C4F3C]">Tells a</span>{" "}
+                <span className="text-[#B6A66A]">Story</span>
               </div>
-              <div className="w-24 h-0.5 bg-[#2C4F3C]" />
+              <div className="w-full h-0.5 mb-18 bg-[#B6A66A] mx-auto" />
             </div>
 
-            <p className="text-[#3B3B3B] leading-relaxed text-lg">
-              Take a peek at the beautiful smile transformations we&apos;ve created! 
-              From subtle fixes to full makeovers, our gallery shows how we help real 
-              people feel more confident every day. Each smile is a reminder of the care 
-              we put into every detail. Your dream smile could be next—let&apos;s make it happen together!
+            <p className="text-[#3B3B3B] leading-relaxed text-md max-w-2xl mx-auto">
+              Take a peek at the beautiful smile transformations we&apos;ve
+              created! From subtle fixes to full makeovers, our gallery shows
+              how we help real people feel more confident every day. Each smile
+              is a reminder of the care we put into every detail. Your dream
+              smile could be next—let&apos;s make it happen together!
             </p>
 
-            <div className="space-y-4">
-              <a href="tel:+18327625635" className="block btn-primary text-center">
+            <div className="space-y-2 mt-20 flex flex-col items-center">
+              <a
+                href="tel:+18327625635"
+                className="inline-block btn-primary text-center px-8 py-3 text-sm"
+              >
                 REQUEST AN APPOINTMENT
               </a>
-              <a href="#"className="block btn-secondary text-center">
+              <a
+                href="#"
+                className="inline-block btn-secondary text-center px-13 py-3 text-sm"
+              >
                 EXPLORE OUR STUDIO
               </a>
             </div>
@@ -83,7 +90,7 @@ export default function Gallery() {
 
           {/* Gallery Side - Custom Masonry Layout */}
           <div className="relative">
-            <div className="grid grid-cols-4 grid-rows-6 gap-3 h-[600px] lg:h-[700px]">
+            <div className="grid grid-cols-4 grid-rows-6 gap-4 h-[600px] lg:h-[800px]">
               {/* Top left - Large before/after face */}
               <div className="col-span-2 row-span-3 relative overflow-hidden rounded-lg">
                 <Image
@@ -140,7 +147,7 @@ export default function Gallery() {
               </div>
 
               {/* Bottom small left */}
-              <div className="col-span-1 row-span-1 relative overflow-hidden rounded-lg">
+              <div className="col-span-2 row-span-1 relative overflow-hidden rounded-lg">
                 <Image
                   src={galleryImages[5].src}
                   alt={galleryImages[5].alt}
@@ -151,7 +158,7 @@ export default function Gallery() {
               </div>
 
               {/* Bottom small right */}
-              <div className="col-span-1 row-span-1 relative overflow-hidden rounded-lg">
+              <div className="col-span-2 row-span-1 relative overflow-hidden rounded-lg">
                 <Image
                   src={galleryImages[6].src}
                   alt={galleryImages[6].alt}
@@ -169,5 +176,5 @@ export default function Gallery() {
         </div>
       </div>
     </section>
-  )
+  );
 }

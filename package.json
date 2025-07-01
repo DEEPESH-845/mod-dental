@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-   "test": "echo \"No tests specified\" && exit 0",
+    "test": "echo \"No tests specified\" && exit 0",
     "dev": "next dev --turbopack",
     "build": "next build --no-lint",
     "build:with-lint": "next build",
@@ -21,9 +21,7 @@
     "framer-motion": "^12.22.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.515.0",
-    "mod-dental": "file:",
     "next": "15.3.3",
-    "radix": "^0.0.0",
     "radix-ui": "^1.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.0.0",
