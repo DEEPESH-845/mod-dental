@@ -27,9 +27,8 @@ export default function Doctors() {
           style={{ objectPosition: 'right' }}
           placeholder="blur"
           blurDataURL="/assets/images/rectangle-68.png"
-          
+          sizes="100vw"
         
-          sizes='100vw'
           priority
         />
       </div>

@@ -1,9 +1,11 @@
+
+
 // These styles apply to every route in the application
 import "./globals.css";
 import type { Metadata } from "next"
 import Footer from "./components/home/Footer";
 import GetInTouch from "./components/home/GetInTouch";
-import Navbar from "./components/common/NavBar";
+import Navbar from "./components/home/Navbar";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -56,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning >
       <head></head>
-      <body className="bg-base-200 overflow-x-hidden min-h-screen pt-32">
+      <body className="bg-base-200 overflow-x-hidden min-h-screen pt-32" suppressHydrationWarning>
          <Navbar/>
         <div className="relative">{children}</div>
         <GetInTouch/>

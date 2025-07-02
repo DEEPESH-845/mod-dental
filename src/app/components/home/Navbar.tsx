@@ -13,7 +13,7 @@ const navigationItems = [
 	{ name: "OUR DOCTORS", href: "/bio/doctors/arora" },
 	{ name: "MOD EXPERIENCE", href: "/experience" },
 	{ name: "OUR STUDIO", href: "/studio" },
-	{ name: "OUR SERVICES", href: "/services" },
+	{ name: "OUR SERVICES", href: "/service" },
 	{ name: "FOR PATIENTS", href: "/patients" },
 	{ name: "CONTACT US", href: "/contact" },
 ];
@@ -54,8 +54,8 @@ export default function Header() {
 						    <Button className="bg-[#2C4F3C] hover:bg-[#284836] text-white px-10 py-7 text-sm font-medium">
                                     PLAN YOUR VISIT
                                 </Button>
-								<span className="flex items-center justify-center rounded-full border border-[#2C4F3C] bg-transparent w-12 h-12 ml-2">
-									<ArrowRight className="w-6 h-6 text-[#2C4F3C]" />
+								<span className="flex items-center justify-center rounded-full border border-[#2C4F3C] bg-transparent hover:bg-[#2C4F3C] w-12 h-12 ml-2">
+									<ArrowRight className="w-6 h-6 text-[#2C4F3C] hover:text-white" />
 								</span>
 						</div>
 
@@ -71,7 +71,7 @@ export default function Header() {
 									{(item.name === "MOD EXPERIENCE" ||
 										item.name === "FOR PATIENTS" ||
 										item.name === "OUR SERVICES") && (
-										<ChevronDown className="w-4 h-4 ml-1 text-gray-400" />
+										<ChevronDown className="w-4 h-4 ml-1 text-gray-400 " />
 									)}
 								</Link>
 							))}
