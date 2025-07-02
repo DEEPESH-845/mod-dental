@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { libreBaskerville, poppins } from "@/lib/fonts";
 
 // Importing images
-const hallwayImage = "/assets/images/hallway.png"; 
+const hallwayImage = "/assets/images/hallway.png";
 const treatmentRoomImage = "/assets/images/Rectangle 60.png";
 const equipmentImage = "/assets/images/Rectangle 61.png";
 const receptionImage = "/assets/images/Rectangle 62.png";
@@ -13,14 +13,13 @@ interface BespokeDentalStudioProps {
   readonly location?: string;
   readonly title?: string;
   readonly description?: string;
-  readonly mainImage?: string;  
+  readonly mainImage?: string;
   readonly galleryImages?: {
-    treatment?: string; 
-    equipment?: string; 
-    reception?: string; 
+    treatment?: string;
+    equipment?: string;
+    reception?: string;
   };
 }
-
 
 export default function BespokeDentalStudio({
   location = "in Houston, Texas",
@@ -43,7 +42,7 @@ export default function BespokeDentalStudio({
             <div className="relative">
               {/* Border Frame */}
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-[#C9B998] rounded-lg z-0"></div>
-              
+
               {/* Main Image */}
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
                 <Image
@@ -57,45 +56,44 @@ export default function BespokeDentalStudio({
               </div>
             </div>
 
-            
-{/* Gallery Grid */}
-<div className="grid grid-cols-[2fr_1fr] gap-4 lg:gap-6 h-[280px] lg:h-[320px] ">
-  {/* Left - Treatment Room Image (Larger) */}
-  {/* Treatment Room Image */}
-  <div className="rounded-xl overflow-hidden shadow-lg">
-    <Image
-      src={galleryImages.treatment || treatmentRoomImage}
-      alt="Dental treatment room"
-      width={400}
-      height={300}
-      className="w-full h-[200px] lg:h-[240px] object-cover"
-    />
-  </div>
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-[2fr_1fr] gap-4 lg:gap-6 h-[280px] lg:h-[320px] ">
+              {/* Left - Treatment Room Image (Larger) */}
+              {/* Treatment Room Image */}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src={galleryImages.treatment || treatmentRoomImage}
+                  alt="Dental treatment room"
+                  width={400}
+                  height={300}
+                  className="w-full h-[200px] lg:h-[240px] object-cover"
+                />
+              </div>
 
-  {/* Equipment Detail Image */}
-  <div className="rounded-xl overflow-hidden shadow-lg">
-    <Image
-      src={galleryImages.equipment || equipmentImage}
-      alt="Dental equipment detail"
-      width={400}
-      height={300}
-      className="w-full h-[200px] lg:h-[240px] object-cover"
-    />
-  </div>
+              {/* Equipment Detail Image */}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src={galleryImages.equipment || equipmentImage}
+                  alt="Dental equipment detail"
+                  width={400}
+                  height={300}
+                  className="w-full h-[200px] lg:h-[240px] object-cover"
+                />
+              </div>
 
-  {/* Reception Area Image */}
-  <div className="rounded-xl overflow-hidden shadow-lg">
-    <Image
-      src={galleryImages.reception || receptionImage}
-      alt="Dental studio reception"
-      width={400}
-      height={300}
-      className="w-full h-[200px] lg:h-[240px] object-cover"
-    />
-  </div>
-</div>
+              {/* Reception Area Image */}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src={galleryImages.reception || receptionImage}
+                  alt="Dental studio reception"
+                  width={400}
+                  height={300}
+                  className="w-full h-[200px] lg:h-[240px] object-cover"
+                />
+              </div>
+            </div>
           </div>
- 
+
           {/* Right Column - Content */}
           <div className="space-y-6 lg:pl-8">
             {/* Title */}
@@ -114,14 +112,16 @@ export default function BespokeDentalStudio({
 
             {/* Description */}
             <div className={`space-y-4 text-[#3B3B3B] ${poppins.className}`}>
-              {description.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-base lg:text-lg leading-relaxed font-light">
+              {description.split("\n\n").map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-base lg:text-lg leading-relaxed font-light"
+                >
                   {paragraph}
                 </p>
               ))}
             </div>
           </div>
-         
         </div>
       </div>
     </section>

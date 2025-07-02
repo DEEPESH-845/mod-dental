@@ -15,9 +15,24 @@ const doctors = [
 
 export default function Doctors() {
   return (
-    <section id="doctors" className="py-20 bg-[#F6F1E9]">
+    <section id="doctors" className=" relative py-20 bg-white">
             {/* Background Image */}
-
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/images/rectangle-68.png"
+          alt="Green velvet background"
+          fill
+          className="object-cover"
+          quality={1}
+          style={{ objectPosition: 'right' }}
+          placeholder="blur"
+          blurDataURL="/assets/images/rectangle-68.png"
+          
+        
+          sizes='100vw'
+          priority
+        />
+      </div>
       {/* Content Overlay */}
       <div className="relative z-10">
       <div className="container mx-auto px-4">

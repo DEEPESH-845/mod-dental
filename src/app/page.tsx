@@ -7,6 +7,8 @@ import Gallery from "./components/home/Gallery";
 import Services from "./components/home/Services";
 import Testimonials from "./components/home/Testimonials";
 import BespokeDentalStudio from "./components/home/DiagnosticPrevention";
+import AppointmentForm from "./components/home/Appointment-Form";
+import HeroAppointmentSectionButton from "./components/common/Appointment-Button";
 
 
 export const metadata: Metadata = {
@@ -18,6 +20,7 @@ export default function Page() {
     <>
      
       <Hero />
+      <HeroAppointmentSectionButton/>
       <BespokeDentalStudio/>
       <Doctors />
       <Services />
@@ -25,6 +28,7 @@ export default function Page() {
       <Gallery />
       <InstagramFeed />
       <Testimonials />
+      <AppointmentForm />
     </>
   );
 }
