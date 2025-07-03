@@ -13,7 +13,7 @@ const navigationItems = [
 	{ name: "OUR DOCTORS", href: "/bio/doctors/arora" },
 	{ name: "MOD EXPERIENCE", href: "/experience" },
 	{ name: "OUR STUDIO", href: "/studio" },
-	{ name: "OUR SERVICES", href: "/service" },
+	{ name: "OUR SERVICES", href: "/services" },
 	{ name: "FOR PATIENTS", href: "/patients" },
 	{ name: "CONTACT US", href: "/contact" },
 ];

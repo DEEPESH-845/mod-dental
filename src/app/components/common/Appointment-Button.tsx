@@ -48,8 +48,10 @@ export default function HeroAppointmentSectionButton({
             onClick={handleCallClick}
             className="border border-[#2C4F3C] bg-white text-[#2C4F3C] hover:bg-[#2C4F3C] hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-md transition-colors duration-200 flex items-center gap-2 whitespace-nowrap"
           >
-            <span>CALL</span>
-            <span className="font-normal">{phoneNumber}</span>
+            <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
+                    <span>CALL</span>
+                    <span className="font-normal">{phoneNumber}</span>
+                  </a>
           </Button>
           
           {/* Right decorative line (hidden on mobile) */}
