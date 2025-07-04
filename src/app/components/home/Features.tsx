@@ -1,37 +1,5 @@
-import { Coffee, Lightbulb, Monitor, Volume2, Users, Armchair } from 'lucide-react'
-
-const features = [
-  {
-    icon: Armchair,
-    title: 'E-Comfort Dental Chairs',
-    description: 'Sit back and relax in our ergonomic, electronically adjustable chairs designed for total comfort.'
-  },
-  {
-    icon: Coffee,
-    title: 'Beverage Bar Bliss',
-    description: 'Enjoy a warm cup of coffee or tea from our in-clinic beverage counter before your appointment.'
-  },
-  {
-    icon: Lightbulb,
-    title: 'Mood Lighting Options',
-    description: 'Customizable lighting designed to match your mood and help you feel calm and at ease.'
-  },
-  {
-    icon: Monitor,
-    title: 'Entertainment While You Wait',
-    description: 'Catch up on your favorite Netflix shows or calming videos while we prepare your treatment.'
-  },
-  {
-    icon: Volume2,
-    title: 'Noise-Free Environment',
-    description: 'We maintain a peaceful, sound-controlled space to ease anxiety and enhance relaxation.'
-  },
-  {
-    icon: Users,
-    title: 'Kid-Friendly Zone',
-    description: 'Dedicated play area and fun distractions to keep your little ones comfortable and engaged.'
-  }
-]
+import { features } from "@/config/features"; // Example: adjust the import path as needed
+import { ReactNode, Key } from "react";
 
 export default function Features() {
   return (
@@ -50,25 +18,28 @@ export default function Features() {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="text-center group hover:transform hover:scale-105 transition-all duration-300"
-            >
-              {/* Icon */}
-              <div className="w-32 h-32 mx-auto mb-6 bg-dental-green/10 rounded-full flex items-center justify-center group-hover:bg-dental-green/20 transition-colors duration-300">
-                <feature.icon className="w-16 h-16 text-dental-green" />
-              </div>
+          {features.map((feature: { icon: React.ElementType; title: ReactNode; description: ReactNode; }, index: Key | null | undefined) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={index}
+                className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="w-32 h-32 mx-auto mb-6 bg-dental-green/10 rounded-full flex items-center justify-center group-hover:bg-dental-green/20 transition-colors duration-300">
+                  <Icon className="w-16 h-16 text-dental-green" />
+                </div>
 
-              {/* Content */}
-              <h3 className="text-xl lg:text-2xl font-medium text-dental-green mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-dental-dark/70 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+                {/* Content */}
+                <h3 className="text-xl lg:text-2xl font-medium text-dental-green mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-dental-dark/70 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}

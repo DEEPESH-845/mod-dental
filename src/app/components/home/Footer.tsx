@@ -1,15 +1,6 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Twitter } from 'lucide-react'
-
-const navLinks = [
-  'OUR DOCTORS',
-  'MOD EXPERIENCE', 
-  'OUR STUDIO',
-  'OUR SERVICES',
-  'FOR PATIENTS',
-  'CONTACT US',
-  'OUR BLOGS'
-]
+import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { NAV_LINKS } from '@/config/navbar';
 
 export default function Footer() {
   return (
@@ -17,13 +8,13 @@ export default function Footer() {
       {/* Navigation Links */}
       <div className="container-custom py-8">
         <nav className="flex flex-wrap justify-center gap-6 lg:gap-8">
-          {navLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <Link
-              key={link}
-              href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+              key={link.label}
+              href={`#${link.label.toLowerCase().replace(/\s+/g, '-')}`}
               className="text-white hover:text-dental-gold transition-colors duration-200 text-sm font-medium"
             >
-              {link}
+              {link.label}
             </Link>
           ))}
         </nav>
