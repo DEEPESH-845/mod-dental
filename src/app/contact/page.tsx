@@ -2,12 +2,12 @@
 import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'Contact Us',
 }
 export default function Page() {
   return (
     <>
-      <h1>About us</h1>
+      <h1>Contact Us</h1>
     </>
   );
 }

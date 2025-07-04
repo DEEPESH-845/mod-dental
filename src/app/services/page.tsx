@@ -6,19 +6,17 @@ import FAQSection from "@/app/components/home/ServicePage/FAQSection";
 import PreventiveDentistry from "@/app/components/home/ServicePage/PreventiveDentistry";
 import ServiceHero from "@/app/components/home/ServicePage/ServiceHero";
 import ServicesProvided from "@/app/components/home/ServicePage/ServiceProvided";
-import TestimonialSection from "@/app/components/home/ServicePage/Testimmonials";
-import AppointmentForm from "../components/home/Appointment-Form";
+
 
 export default function Home() {
 	return (
-		<main suppressHydrationWarning>
+		<main>
 			<ServiceHero />
 			<ActionCards />
 			<PreventiveDentistry />
 			<ServicesProvided />
 			<FAQSection />
-			<TestimonialSection />
-			<AppointmentForm/>
+			
 		   
 		</main>
 	);

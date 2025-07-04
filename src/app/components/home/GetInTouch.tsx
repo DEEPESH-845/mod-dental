@@ -5,7 +5,7 @@ import GoogleMap from "./GoogleMap"
 export default function GetInTouch() {
 
   return (
-    <div className="bg-[#F3EFE9]">
+    <div style={{ backgroundColor: '#F3EFE9' }}>
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row">
         {/* Left Side - Contact Information */}

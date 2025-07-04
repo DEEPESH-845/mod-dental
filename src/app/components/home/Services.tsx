@@ -101,9 +101,9 @@ export default function Services() {
           {/* Header */}
           <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
             <div className="text-white mb-8 lg:mb-0">
-              <h2 className="text-3xl lg:text-4xl font-light mb-2">
+                <p className="text-3xl lg:text-4xl font-light mb-2">
                 All-in-one
-              </h2>
+                </p>
               <h3 className="text-2xl lg:text-3xl font-light ml-8">
                 right here in one place
               </h3>

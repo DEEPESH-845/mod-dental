@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/app/components/home/ui/shee
 import MOD_Logo from "@/../public/assets/images/logo.png";
 
 const navigationItems = [
-	{ name: "OUR DOCTORS", href: "/bio/doctors/arora" },
+	{ name: "OUR DOCTORS", href: "/bio/doctors" },
 	{ name: "MOD EXPERIENCE", href: "/experience" },
 	{ name: "OUR STUDIO", href: "/studio" },
 	{ name: "OUR SERVICES", href: "/services" },

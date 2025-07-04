@@ -19,14 +19,14 @@ export default function Doctors() {
             {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/assets/images/rectangle-68.png"
+          src="/assets/images/White_velvet.png"
           alt="Green velvet background"
           fill
           className="object-cover"
           quality={1}
           style={{ objectPosition: 'right' }}
           placeholder="blur"
-          blurDataURL="/assets/images/rectangle-68.png"
+          blurDataURL="/assets/images/White_velvet.png"
           sizes="100vw"
         
           priority
@@ -49,8 +49,9 @@ export default function Doctors() {
               />
             </div>
             <div className="flex space-x-4">
-              <button className="bg-[#2C4F3C] text-white px-6 py-3">REQUEST AN APPOINTMENT</button>
-              <button className="border border-gray-400 text-gray-600 hover:text-white hover:bg-[#2C4F3C] px-6 py-3">MEET OUR DOCTORS</button>
+              <button className="bg-[#2C4F3C] text-white px-6 py-3 font-medium rounded-md  flex items-center gap-2 whitespace-nowrap">REQUEST AN APPOINTMENT</button>
+              {/* className="border border-[#2C4F3C] bg-white text-[#2C4F3C] hover:bg-[#2C4F3C] hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-md transition-colors duration-200 flex items-center gap-2 whitespace-nowrap"*/}
+              <button className="border border-gray-400 text-gray-600 hover:text-white hover:bg-[#2C4F3C] px-6 py-3 font-medium rounded-md transition-colors duration-200 flex items-center gap-2 whitespace-nowrap ">MEET OUR DOCTORS</button>
             </div>
           </div>
 
