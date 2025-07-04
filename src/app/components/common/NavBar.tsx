@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NavBar() {
   return (
@@ -17,12 +18,13 @@ export default function NavBar() {
                 className="link text-base-content link-neutral text-xl font-bold no-underline"
                 href="#"
               >
-                <img
+                <Image
                   src="/assets/images/logo.png"
-                  alt="Logo"
+                  alt="MOD Dental Studio Logo"
                   width={150}
                   height={50}
                   className="h-8 md:h-10"
+                  priority
                 />
               </Link>
             </div>

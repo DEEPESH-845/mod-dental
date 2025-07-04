@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="footer bg-base-200/60 px-6 py-4">
@@ -15,39 +17,17 @@ export function Footer() {
           </p>
         </aside>
         <div className="flex h-5 gap-4">
-          <a href="#" className="link" aria-label="Facebook Link" style={{ background: "url(/assets/images/facebook.png) lightgray 50% / contain no-repeat" }}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-            >
-              <circle cx="25" cy="25" r="25" fill="#B6A66A" />
-            </svg>
-            f
+          <a href="#" className="link" aria-label="Facebook Link">
+            <span className="sr-only">Facebook</span>
+            <Image src="/assets/images/Facebook.png" alt="Facebook" width={24} height={24} />
           </a>
           <a href="#" className="link" aria-label="X Link">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-            >
-              <circle cx="25" cy="25" r="25" fill="#B6A66A" />
-            </svg>
+            <span className="sr-only">X (Twitter)</span>
+            <Image src="/assets/images/X.png" alt="X (Twitter)" width={24} height={24} />
           </a>
           <a href="#" className="link" aria-label="Google Link">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-            >
-              <circle cx="25" cy="25" r="25" fill="#B6A66A" />
-            </svg>
+            <span className="sr-only">Google</span>
+            <Image src="/assets/images/Instagram.png" alt="Google" width={24} height={24} />
           </a>
         </div>
       </div>
