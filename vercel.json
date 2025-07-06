@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npx next build",
+  "devCommand": "npx next dev --turbopack",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "app/**/*.{js,ts,jsx,tsx}": {
+      "maxDuration": 30
+    }
+  }
+}

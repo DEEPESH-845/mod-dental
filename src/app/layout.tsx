@@ -1,16 +1,20 @@
+
+
 // These styles apply to every route in the application
 import "./globals.css";
-import FlyonuiScript from "./components/common/FlyonuiScript";
-import NavBar from "./components/common/NavBar";
 import type { Metadata } from "next"
-import Footer from "./components/common/footer";
-import Contact from "./components/common/Contact";
+import Footer from "./components/home/Footer";
+import GetInTouch from "./components/home/GetInTouch";
+import Navbar from "./components/home/Navbar";
+import AppointmentForm from "./components/home/Appointment-Form";
+import TestimonialSection from "./components/home/Testimonials";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
 // For example, the page at /home can have its own metadata
 // which will override the default metadata defined here
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mod-dental.com"),
   title: {
     default: "MOD DENTAL",
     template: "%s | MOD DENTAL",
@@ -54,15 +58,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <head></head>
-      <body className="min-h-screen bg-base-200">
-        <NavBar />
-        <div className="relative px-4 lg:px-8">{children}</div>
-        <Contact />
-        <Footer />
+      <body className="bg-base-200 overflow-x-hidden min-h-screen pt-32" suppressHydrationWarning>
+         <Navbar/>
+        <div className="relative">{children}</div>
+        <TestimonialSection/>
+        <AppointmentForm/>
+        <GetInTouch/>
+        <Footer/>
       </body>
-      <FlyonuiScript />
     </html>
   );
 }

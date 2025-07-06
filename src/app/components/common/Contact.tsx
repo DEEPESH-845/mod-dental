@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import GoogleMap from './google-map'
@@ -282,8 +280,8 @@ export default function Contact() {
               </div>
 
               {/* Office Image */}
-              <div className="relative h-64 lg:h-full">
-              <GoogleMap />
+              <div className="lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-auto relative">
+              <GoogleMap  />
               </div>
             </div>
           </div>

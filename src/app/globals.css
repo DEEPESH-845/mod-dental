@@ -1,16 +1,23 @@
 @import "tailwindcss";
 
-@import "flyonui/variants.css";
-
-@plugin "flyonui"{
-    themes: all;
-}
-@source "../../node_modules/flyonui/flyonui.js";
-
 @theme {
     --color-dental-green: #2C4F3C;
     --color-dental-cream: #F3EFE9; 
-    --color-dental-gold: ##B6A66A; 
+    --color-dental-gold: ##B6A66A; --color-dental-green: #2C4F3C;
+    --color-dental-green-dark: #1e3429;
+    --color-dental-green-darker: #284836;
+    --color-dental-green-light: #4A7D5A;
+    --color-dental-green-alt: #325240;
+    --color-dental-cream: #F3EFE9;
+    --color-dental-cream-light: #F6F1E9;
+    --color-dental-gold: #B6A66A;
+    --color-dental-gold-light: #B6A76A;
+    --color-dental-gold-alt: #C9B998;
+    --color-dental-gold-dark: #A89660;
+    --color-dental-gold-accent: #BFB17E;
+    --color-dental-gray: #3B3B3B;
+    --color-dental-gray-light: #809385;
+    --color-dental-gray-lighter: #E4E2DC; 
   }
 
   @layer utilities {
@@ -50,4 +57,25 @@
     .text-shadow-strong {
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.68);
     }
+
+    /* Additional utilities for common patterns */
+.card-base {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.card-hover {
+  @apply hover:shadow-lg transition-shadow duration-200;
+}
+
+.gradient-dental {
+  background: linear-gradient(135deg, #2C4F3C 0%, #B6A66A 100%);
+}
+
+.overlay-dark {
+  background: rgba(44, 79, 60, 0.8);
+}
+
+.overlay-light {
+  background: rgba(243, 239, 233, 0.9);
+}
   }

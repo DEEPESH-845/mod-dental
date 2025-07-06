@@ -20,61 +20,51 @@ export default function Footer() {
         </nav>
       </div>
 
-      {/* Social Media & Copyright */}
-      <div className="border-t border-white/20">
-        <div className="container-custom py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            {/* Social Media */}
-            <div className="flex space-x-4">
+            {/* Social Media Icons */}
+            <div className="flex justify-center lg:justify-end gap-3">
               <a
                 href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-dental-gold rounded-full flex items-center justify-center hover:bg-dental-gold/80 transition-colors duration-200"
-                aria-label="Facebook"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-[#B6A66A] rounded-full flex items-center justify-center hover:bg-[#A89660] transition-colors duration-200"
+                aria-label="Follow us on Facebook"
               >
-                <Facebook className="w-5 h-5 text-white" />
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
               <a
                 href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-dental-gold rounded-full flex items-center justify-center hover:bg-dental-gold/80 transition-colors duration-200"
-                aria-label="Instagram"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-[#B6A66A] rounded-full flex items-center justify-center hover:bg-[#A89660] transition-colors duration-200"
+                aria-label="Follow us on Instagram"
               >
-                <Instagram className="w-5 h-5 text-white" />
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
               <a
                 href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-dental-gold rounded-full flex items-center justify-center hover:bg-dental-gold/80 transition-colors duration-200"
-                aria-label="Twitter"
+                className="w-8 h-8 sm:w-10 sm:h-10 bg-[#B6A66A] rounded-full flex items-center justify-center hover:bg-[#A89660] transition-colors duration-200"
+                aria-label="Follow us on X (Twitter)"
               >
-                <Twitter className="w-5 h-5 text-white" />
+                <svg 
+                  className="w-3 h-3 sm:w-4 sm:h-4 text-white" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24" 
+                  aria-hidden="true"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
               </a>
-            </div>
-
-            {/* Copyright */}
-            <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-white/80">
-              <span>© MOD Dental Studio 2025</span>
-              <Link
-                href="/privacy"
-                className="hover:text-white transition-colors duration-200"
-              >
-                Privacy Policy
-              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-dental-gold">
-        <div className="container-custom py-2">
-          <div className="text-center text-dental-dark text-sm">
-            Designed with ❤️ for modern dental care
-          </div>
+      <div className="bg-[#B6A66A] p-4 flex items-center justify-center sm:justify-end">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 lg:gap-6 text-xs sm:text-sm">
+          <span className="text-gray-800">© MOD Dental Studio 2025</span>
+          <Link
+            href="/privacy-policy"
+            className="text-gray-800 hover:text-gray-600 transition-colors duration-200"
+          >
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

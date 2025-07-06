@@ -3,17 +3,16 @@ import { ReactNode, Key } from "react";
 
 export default function Features() {
   return (
-    <section id="features" className="section-padding bg-white">
-      <div className="container-custom">
+    <section id="features" className="py-20 bg-[#F6F1E9]">
+      <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-light text-dental-green mb-6 font-raleway">
-            Patient-Centered Experience
+        <div className="text-center mb-12">
+          <h2 className="text-4xl lg:text-5xl font-light text-[#2C4F3C] mb-4">
+            Patient Centered. <span className="font-normal">Comfort Focused.</span>
           </h2>
-          <p className="text-lg lg:text-xl text-dental-dark/70 max-w-4xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Innovative comforts that transform routine visits into extraordinary experiences.
           </p>
-          <div className="w-24 h-0.5 bg-dental-green mx-auto mt-8" />
         </div>
 
         {/* Features Grid */}
@@ -40,16 +39,6 @@ export default function Features() {
               </div>
             );
           })}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 pt-12 border-t border-dental-green/20">
-          <h3 className="text-2xl font-medium text-dental-green mb-6">
-            Experience the Difference
-          </h3>
-          <a href="#contact" className="btn-primary">
-            Schedule Your Visit Today
-          </a>
         </div>
       </div>
     </section>

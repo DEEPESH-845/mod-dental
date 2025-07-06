@@ -3,100 +3,86 @@ import Image from 'next/image'
 const doctors = [
   {
     name: 'Dr. Neha Sharma',
-    title: 'Lead Dentist & Founder',
-    bio: 'With over 15 years of experience in cosmetic and restorative dentistry, Dr. Sharma is passionate about creating beautiful, healthy smiles. She graduated from the University of Texas Health Science Center and has completed advanced training in dental implants and smile design.',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     image: '/assets/images/dr-neha.jpg',
-    specialties: ['Cosmetic Dentistry', 'Dental Implants', 'Smile Design']
   },
   {
     name: 'Dr. Smit Patel',
-    title: 'Associate Dentist',
-    bio: 'Dr. Patel brings a gentle touch and meticulous attention to detail to every procedure. Specializing in preventive care and restorative dentistry, he ensures that each patient receives personalized treatment in a comfortable environment.',
+    bio: 'Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum.',
     image: '/assets/images/dr-smith.jpg',
-    specialties: ['Preventive Care', 'Restorative Dentistry', 'Oral Surgery']
   }
 ]
 
 export default function Doctors() {
   return (
-    <section id="doctors" className="section-padding bg-dental-cream">
-      <div className="container-custom">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-light text-dental-green mb-4 font-raleway">
-            Meet Our Expert Team
-          </h2>
-          <p className="text-lg text-dental-dark/70 max-w-2xl mx-auto">
-            Caring hands behind every smile. Our experienced dentists are dedicated to providing exceptional care with a personal touch.
-          </p>
-          <div className="w-24 h-0.5 bg-dental-green mx-auto mt-6" />
-        </div>
-
-        {/* Doctors Grid */}
-        <div className="space-y-16">
-          {doctors.map((doctor, index) => (
-            <div
-              key={doctor.name}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}
-            >
-              {/* Image */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={doctor.image}
-                    alt={doctor.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                <div>
-                  <h3 className="text-2xl lg:text-3xl font-medium text-dental-green mb-2">
-                    {doctor.name}
-                  </h3>
-                  <p className="text-dental-gold font-medium mb-4">{doctor.title}</p>
-                  <div className="w-16 h-0.5 bg-dental-green" />
-                </div>
-
-                <p className="text-dental-dark/80 leading-relaxed">
-                  {doctor.bio}
-                </p>
-
-                <div>
-                  <h4 className="font-medium text-dental-green mb-3">Specialties:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {doctor.specialties.map((specialty) => (
-                      <span
-                        key={specialty}
-                        className="bg-dental-green/10 text-dental-green px-3 py-1 rounded-full text-sm"
-                      >
-                        {specialty}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+    <section id="doctors" className=" relative py-20 bg-white">
+            {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/assets/images/White_velvet.png"
+          alt="Green velvet background"
+          fill
+          className="object-cover"
+          quality={1}
+          style={{ objectPosition: 'right' }}
+          placeholder="blur"
+          blurDataURL="/assets/images/White_velvet.png"
+          sizes="100vw"
+        
+          priority
+        />
+      </div>
+      {/* Content Overlay */}
+      <div className="relative z-10">
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
+          {/* Left Column */}
+          <div className="space-y-6">
+            <h2 className="text-3xl text-gray-700">Meet Us</h2>
+            <div className="p-2 border border-stone-300">
+              <Image
+                src={doctors[0].image}
+                alt={doctors[0].name}
+                width={500}
+                height={600}
+                className="object-cover"
+              />
             </div>
-          ))}
-        </div>
+            <div className="flex space-x-4">
+              <button className="bg-[#2C4F3C] text-white px-6 py-3 font-medium rounded-md  flex items-center gap-2 whitespace-nowrap">REQUEST AN APPOINTMENT</button>
+              {/* className="border border-[#2C4F3C] bg-white text-[#2C4F3C] hover:bg-[#2C4F3C] hover:text-white px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium rounded-md transition-colors duration-200 flex items-center gap-2 whitespace-nowrap"*/}
+              <button className="border border-gray-400 text-gray-600 hover:text-white hover:bg-[#2C4F3C] px-6 py-3 font-medium rounded-md transition-colors duration-200 flex items-center gap-2 whitespace-nowrap ">MEET OUR DOCTORS</button>
+            </div>
+          </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16 pt-12 border-t border-dental-green/20">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="btn-primary">
-              REQUEST AN APPOINTMENT
-            </a>
-            <a href="tel:+18327625635" className="btn-secondary">
-              CALL +1 (832) 762‑5635
-            </a>
+          {/* Center Column */}
+          <div className="lg:col-span-1 space-y-12 text-gray-600 pt-16">
+            <div>
+              <h3 className="text-2xl text-[#4A7D5A] mb-2">{doctors[0].name}</h3>
+              <p className="text-sm leading-relaxed">{doctors[0].bio}</p>
+            </div>
+            <div className="pt-12">
+              <h3 className="text-2xl text-[#4A7D5A] mb-2 text-right">{doctors[1].name}</h3>
+              <p className="text-sm leading-relaxed text-right">{doctors[1].bio}</p>
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="space-y-6 text-right">
+            <h2 className="text-3xl text-gray-700">Caring hands<br/>behind<br/>every smile.</h2>
+            <div className="p-2 border border-stone-300 inline-block">
+              <Image
+                src={doctors[1].image}
+                alt={doctors[1].name}
+                width={500}
+                height={600}
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
   )
 }
