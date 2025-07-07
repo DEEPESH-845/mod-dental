@@ -1,10 +1,8 @@
 "use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Image from "next/image";
 import { NAV_LINKS, NAV_ACTIONS, LOGO } from "@/config/navbar";
+import { Phone } from "lucide-react";
 
 export default function NavBar() {
   return (
