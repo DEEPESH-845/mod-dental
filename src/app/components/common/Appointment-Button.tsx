@@ -2,7 +2,6 @@
 
 import { Button } from "@/app/components/home/ui/Button";
 
-
 interface HeroAppointmentSectionProps {
   readonly phoneNumber?: string;
   readonly onRequestAppointment?: () => void;

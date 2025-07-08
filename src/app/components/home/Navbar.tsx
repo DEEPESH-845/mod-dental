@@ -7,8 +7,6 @@ import { Menu, ArrowRight, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/app/components/home/ui/Button";
 import { Sheet, SheetContent, SheetTrigger } from "@/app/components/home/ui/sheet";
 
-import MOD_Logo from "@/../public/assets/images/logo.png";
-
 const navigationItems = [
 	{ name: "OUR DOCTORS", href: "/bio/doctors" },
 	{ name: "MOD EXPERIENCE", href: "/experience" },
@@ -29,7 +27,7 @@ export default function Header() {
 					<div className="flex-shrink-0">
 						<Link href="/">
 							<Image
-								src={MOD_Logo}
+								src="/assets/images/logo.jpg"
 								alt="MOD Dentist"
 								width={120}
 								height={60}
