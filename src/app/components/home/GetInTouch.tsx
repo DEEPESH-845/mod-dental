@@ -1,14 +1,15 @@
+"use client"
+
 import GoogleMap from "./GoogleMap"
 
 export default function GetInTouch() {
-  // Replace with your actual Google Maps API key
 
   return (
-    <div className="min-h-screen bg-[#F3EFE9]">
+    <div style={{ backgroundColor: '#F3EFE9' }}>
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row min-h-screen">
+      <div className="flex flex-col lg:flex-row">
         {/* Left Side - Contact Information */}
-        <div className="lg:w-1/2 bg-[#F3EFE9] p-6 sm:p-8 lg:p-12 xl:p-16 relative">
+        <div className="lg:w-1/2 bg-[#F3EFE9] p-6 sm:p-8 lg:p-12 xl:p-16 relative min-h-[600px] lg:min-h-screen">
           <div className="max-w-md">
             {/* Header */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#2C4F3C] mb-2 font-serif leading-tight">
@@ -89,10 +90,10 @@ export default function GetInTouch() {
         </div>
 
         {/* Right Side - Interactive Map */}
-        <div className="lg:w-1/2 h-64 sm:h-80 md:h-96 lg:h-auto relative">
+        <div className="lg:w-1/2 h-[500px] sm:h-[600px] lg:h-auto lg:min-h-screen relative">
           <GoogleMap />
         </div>
       </div>
-     </div>
+    </div>
   )
 }

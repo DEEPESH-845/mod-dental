@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { services } from '@/config/services';
+  
 
 export default function Services() {
   const [currentIndex, setCurrentIndex] = useState(0)
