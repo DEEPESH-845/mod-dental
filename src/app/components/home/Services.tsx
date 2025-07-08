@@ -3,9 +3,67 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { services } from '@/config/services';
-  
 
+const services = [
+  {
+    id: 1,
+    title: 'Dental Implants',
+    description: 'Permanent solution for',
+    highlight: 'Missing Teeth',
+    src: '/assets/images/group-80.png',
+  },
+  {
+    id: 2,
+    title: 'Smile Makeover',
+    description: 'Design your Dream',
+    highlight: 'Smile today',
+    src: '/assets/images/group-81.png',
+  },
+  {
+    id: 3,
+    title: 'Wisdom Extraction',
+    description: 'Safe removal with',
+    highlight: 'Expert Care',
+    src: '/assets/images/group-82.png',
+  },
+  {
+    id: 4,
+    title: 'Preventive Dentistry',
+    description: 'Stay protected.',
+    highlight: 'Stay Cavity-free',
+    src: '/assets/images/group-83.png',
+  },
+  {
+    id: 5,
+    title: 'Teeth Straightening',
+    description: 'Align teeth with',
+    highlight: 'Modern Precision',
+    src: '/assets/images/group-84.png',
+  },
+  {
+    id: 6,
+    title: 'Restorative Dentistry',
+    description: 'Rebuild strength.',
+    highlight: 'Restore function.',
+    src: '/assets/images/group-85.png',
+  },
+  {
+    id: 7,
+    title: 'Cosmetic Dentistry',
+    description: 'Enhance beauty with',
+    highlight: 'Natural Results',
+    src: '/assets/images/group-86.png',
+  },
+  {
+    id: 8,
+    title: 'Sleep Apnea',
+    description: 'Breathe better.',
+    highlight: 'Sleep deeper tonight.',
+    src: '/assets/images/group-87.png',
+  }
+
+  
+]
 export default function Services() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const itemsPerView = 3
