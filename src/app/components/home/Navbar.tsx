@@ -27,7 +27,7 @@ export default function Header() {
 					<div className="flex-shrink-0">
 						<Link href="/">
 							<Image
-								src="/assets/images/logo.jpg"
+								src="/assets/images/logo.png"
 								alt="MOD Dentist"
 								width={120}
 								height={60}
