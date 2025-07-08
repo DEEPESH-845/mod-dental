@@ -2,6 +2,8 @@
 
 import { useRef, useEffect } from "react";
 
+
+
 export default function HeroSection() {
 	const videoRef = useRef<HTMLVideoElement>(null);
 

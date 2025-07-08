@@ -98,11 +98,11 @@ export default function BespokeDentalStudio({
           <div className="space-y-6 lg:pl-8">
             {/* Title */}
             <div>
-              <h2
+                <h2
                 className={`text-3xl lg:text-4xl xl:text-5xl font-light text-[#2C4F3C] ${libreBaskerville.className}`}
-              >
+                >
                 {title}
-              </h2>
+                </h2>
               <p
                 className={`text-lg lg:text-xl text-[#2C4F3C] italic mt-2 ${libreBaskerville.className}`}
               >

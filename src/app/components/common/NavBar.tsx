@@ -1,122 +1,102 @@
 "use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, ArrowRight, Phone } from "lucide-react";
-import { Button } from "@/app/components/home/ui/Button";
-import { Sheet, SheetContent, SheetTrigger } from "@/app/components/home/ui/sheet";
+import { NAV_LINKS, NAV_ACTIONS, LOGO } from "@/config/navbar";
+import { Phone } from "lucide-react";
 
-const navigationItems = [
-	{ name: "OUR DOCTORS", href: "/bio/doctors/dr-arora" },
-	{ name: "MOD EXPERIENCE", href: "/experience" },
-	{ name: "OUR STUDIO", href: "/studio" },
-	{ name: "OUR SERVICES", href: "/services" },
-	{ name: "FOR PATIENTS", href: "/patients" },
-	{ name: "CONTACT US", href: "/contact" },
-];
-
-export default function Navbar() {
-	const [isOpen, setIsOpen] = useState(false);
-
-	return (
-		<header className="border-b border-gray-200 relative z-50 bg-[#F6F1E9E5]">
-			<div className=" mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="flex items-center h-32 justify-between">
-					{/* Logo - Left side */}
-					<div className="flex-shrink-0">
-						<Link href="/">
-							<Image
-								src="/assets/images/logo.png"
-								alt="MOD Dentist"
-								width={120}
-								height={60}
-								className="h-20 w-auto"
-							/>
-						</Link>
-					</div>
-
-					{/* Spacer to push content to the right */}
-					<div className="flex-1" />
-
-					<div className="flex flex-col items-center justify-between w-full lg:w-auto gap-4 lg:space-x-8">
-						{/* Desktop CTA Buttons - Far right */}
-						<div className="hidden lg:flex self-end items-center space-x-4">
-							<Button
-								
-								className="bg-white text-gray-700 border-[#2C4F3C] hover:bg-[#284836] hover:text-white px-6 py-7 text-sm font-medium"
-							>
-								<Phone className="w-4 h-4 mr-2" />
-								CALL +1 (832) 762 5635
-							</Button>
-							<Button className="bg-[#2C4F3C] hover:bg-[#284836] text-white px-10j py-7 text-sm font-medium">
-								PLAN YOUR VISIT
-								<ArrowRight className="w-4 h-4 ml-2" />
-							</Button>
-						</div>
-
-						{/* Desktop Navigation - Center-right */}
-						<nav className="hidden lg:flex items-center space-x-8 mr-8">
-							{navigationItems.map((item) => (
-								<Link
-									key={item.name}
-									href={item.href}
-									className="text-gray-700 hover:text-gray-900 text-sm font-medium tracking-wide transition-colors duration-200"
-								>
-									{item.name}
-								</Link>
-							))}
-						</nav>
-					</div>
-
-					{/* Mobile menu button */}
-					<Sheet
-						open={isOpen}
-						onOpenChange={setIsOpen}
-					>
-						<SheetTrigger asChild>
-							<Button
-								className="lg:hidden ml-4"
-							>
-								<Menu className="h-6 w-6" />
-								<span className="sr-only">Open menu</span>
-							</Button>
-						</SheetTrigger>
-						<SheetContent
-							side="right"
-							className="w-[300px] sm:w-[400px]"
-						>
-							<div className="flex flex-col space-y-6 mt-6">
-								<nav className="flex flex-col space-y-4">
-									{navigationItems.map((item) => (
-										<Link
-											key={item.name}
-											href={item.href}
-											className="text-gray-700 hover:text-gray-900 text-base font-medium tracking-wide transition-colors duration-200"
-											onClick={() => setIsOpen(false)}
-										>
-											{item.name}
-										</Link>
-									))}
-								</nav>
-								<div className="flex flex-col space-y-3 pt-6 border-t border-gray-200">
-									<Button
-									
-										className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50 w-full justify-center"
-									>
-										<Phone className="w-4 h-4 mr-2" />
-										CALL +1 (832) 762 5635
-									</Button>
-									<Button className="bg-teal-700 hover:bg-teal-800 text-white w-full justify-center">
-										PLAN YOUR VISIT
-										<ArrowRight className="w-4 h-4 ml-2" />
-									</Button>
-								</div>
-							</div>
-						</SheetContent>
-					</Sheet>
-				</div>
-			</div>
-		</header>
-	);
+export default function NavBar() {
+  return (
+    <>
+      <header className="sticky top-0 left-0 right-0 z-50 bg-dental-cream/95 backdrop-blur-md border-b border-dental-green/10">
+        <div className="container-custom">
+          <nav
+            className="navbar rounded-t-box gap-4"
+            role="navigation"
+            aria-label="main navigation"
+            style={{ backgroundColor: "#F6F1E9E5" }}
+          >
+            <div className="navbar-start items-center">
+              <Link
+                className="link text-base-content link-neutral text-xl font-bold no-underline"
+                href="#"
+              >
+                <Image
+                  src={LOGO.src}
+                  alt={LOGO.alt}
+                  width={LOGO.width}
+                  height={LOGO.height}
+                  className="h-8 md:h-10"
+                  priority
+                />
+              </Link>
+            </div>
+            <div className="navbar-end flex items-center gap-4">
+              <div className="hidden lg:flex items-center space-x-4">
+                {NAV_ACTIONS.map((action) =>
+                  action.type === "phone" ? (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      className="flex items-center btn-secondary text-sm"
+                    >
+                      <Phone className="mr-2 h-4 w-4" />
+                      {action.label}
+                    </a>
+                  ) : (
+                    <Link key={action.label} href={action.href} className="btn-primary text-sm">
+                      {action.label}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          </nav>
+          <div
+            className="navbar-end bg-base-100 flex w-full items-right"
+            style={{ backgroundColor: "#F6F1E9E5"! }}
+          >
+            <ul
+              className="menu menu-horizontal gap-2 text-base"
+              style={{ backgroundColor: "#F6F1E9E5"! }}
+            >
+              {NAV_LINKS.map((item) =>
+                item.dropdown ? (
+                  <li key={item.label} className="dropdown relative inline-flex [--offset:9] [--placement:bottom-end] max-sm:[--placement:bottom]">
+                    <button
+                      type="button"
+                      className="dropdown-toggle dropdown-open:bg-base-content/10 dropdown-open:text-base-content max-sm:px-2"
+                      aria-haspopup="menu"
+                      aria-expanded="false"
+                      aria-label="Dropdown"
+                    >
+                      {item.label}
+                      <span className="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+                    </button>
+                    <ul
+                      className="dropdown-menu  dropdown-open:opacity-100 hidden"
+                      role="menu"
+                      aria-orientation="vertical"
+                      aria-labelledby="ui-components"
+                    >
+                      {item.dropdown.map((sub) => (
+                        <li key={sub.label}>
+                          <Link className="dropdown-item" href={sub.href}>
+                            {sub.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li key={item.label}>
+                    <Link href={item.href}>{item.label}</Link>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        </div>
+      </header>
+    </>
+  );
 }

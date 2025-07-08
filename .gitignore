@@ -12,6 +12,10 @@
 
 # testing
 /coverage
+styles.js
+style-audit-report.json
+
+
 
 # next.js
 /.next/
@@ -39,3 +43,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+*.md
+!README.md
