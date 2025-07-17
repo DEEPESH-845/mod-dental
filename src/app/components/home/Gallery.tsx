@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { playball } from '@/lib/fonts';
 
 const galleryImages = [
   {
@@ -45,6 +46,8 @@ const galleryImages = [
   }
 ]
 
+
+
 export default function Gallery() {
   return (
     <section id="gallery" className="section-padding bg-white">
@@ -53,13 +56,13 @@ export default function Gallery() {
           {/* Content Side */}
           <div className="space-y-8 text-center">
             <div className="space-y-4 mr-6">
-              <h2 className="text-4xl lg:text-5xl font-light text-[#2C4F3C] font-raleway">
+              <h2 className={` text-4xl lg:text-5xl ${playball.className} text-[#2C4F3C] `}>
                 Where every
               </h2>
               <div className="text-4xl lg:text-5xl mb-12 font-light">
-                <span className="text-[#B6A66A]">Smile</span>{" "}
-                <span className="text-[#2C4F3C]">Tells a</span>{" "}
-                <span className="text-[#B6A66A]">Story</span>
+                <span className={` ${playball.className} text-[#B6A66A]`}>Smile</span>{" "}
+                <span className={`${playball.className} text-[#2C4F3C]`}>Tells a</span>{" "}
+                <span className={`${playball.className} text-[#B6A66A]`}>Story</span>
               </div>
               <div className="w-full h-0.5 mb-18 bg-[#B6A66A] mx-auto" />
             </div>

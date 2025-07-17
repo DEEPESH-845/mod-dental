@@ -35,16 +35,17 @@ export default function Header() {
 							/>
 						</Link>
 					</div>
-
 					{/* Spacer to push content to the right */}
 					<div className="flex-1" />
 
 					<div className="flex flex-col items-center justify-between w-full lg:w-auto gap-4 lg:space-x-8">
+						
 						{/* Desktop CTA Buttons - Far right */}
 						<div className="hidden lg:flex self-end items-center space-x-4">
 							<Button
 								variant="outline"
-								className="bg-white text-gray-700 border-[#2C4F3C] hover:bg-[#284836] hover:text-white px-6 py-7 text-sm font-medium"
+								onClick={() => window.location.href = "tel:+18327625635"}
+								className="bg-white text-gray-700 border-[#2C4F3C] hover:bg-[#284836] hover:text-white px-6 py-7 text-sm font-medium duration-300 transition-colors"
 							>
 								<Phone className="w-4 h-4 mr-2" />
 								CALL +1 (832) 762 5635
@@ -52,8 +53,8 @@ export default function Header() {
 						    <Button className="bg-[#2C4F3C] hover:bg-[#284836] text-white px-10 py-7 text-sm font-medium">
                                     PLAN YOUR VISIT
                                 </Button>
-								<span className="flex items-center justify-center rounded-full border border-[#2C4F3C] bg-transparent hover:bg-[#2C4F3C] w-12 h-12 ml-2">
-									<ArrowRight className="w-6 h-6 text-[#2C4F3C] hover:text-white" />
+								<span className="flex items-center group justify-center rounded-full border border-[#2C4F3C] bg-transparent hover:bg-[#2C4F3C] w-12 h-12 ml-2">
+									<ArrowRight className="w-6 h-6 text-[#2C4F3C] group-hover:text-white" />
 								</span>
 						</div>
 
@@ -63,19 +64,18 @@ export default function Header() {
 								<Link
 									key={item.name}
 									href={item.href}
-									className="text-gray-700 hover:text-gray-900 text-sm font-medium tracking-wide transition-colors duration-200 flex items-center"
+									className="text-gray-700 group hover:text-gray-900 text-sm font-medium tracking-wide transition-colors duration-200  items-center dropdown relative inline-flex [--offset:9] [--placement:bottom-end] max-sm:[--placement:bottom]"
 								>
 									{item.name}
 									{(item.name === "MOD EXPERIENCE" ||
 										item.name === "FOR PATIENTS" ||
 										item.name === "OUR SERVICES") && (
-										<ChevronDown className="w-4 h-4 ml-1 text-gray-400 " />
+										<ChevronDown className="w-4 h-4 ml-1 text-gray-400 group-hover:-rotate-90 duration-300" />
 									)}
 								</Link>
 							))}
 						</nav>
 					</div>
-
 					{/* Mobile menu button */}
 					<Sheet
 						open={isOpen}
@@ -113,19 +113,6 @@ export default function Header() {
 										</Link>
 									))}
 								</nav>
-								<div className="flex flex-col space-y-3 pt-6 border-t border-gray-200">
-									<Button
-										variant="outline"
-										className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50 w-full justify-center"
-									>
-										<Phone className="w-4 h-4 mr-2" />
-										CALL +1 (832) 762 5635
-									</Button>
-									<Button className="bg-teal-700 hover:bg-teal-800 text-white w-full justify-center">
-										PLAN YOUR VISIT
-										<ArrowRight className="w-4 h-4 ml-2" />
-									</Button>
-								</div>
 							</div>
 						</SheetContent>
 					</Sheet>

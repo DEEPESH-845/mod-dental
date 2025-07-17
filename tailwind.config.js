@@ -1,4 +1,4 @@
-import { Config } from "tailwindcss";
+// import { config } from "tailwindcss";
 
 const config = {
   darkMode: "class",
@@ -9,6 +9,12 @@ const config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+      'playball': ['var(--font-playball)', 'cursive'],
+        'inter': ['var(--font-inter)', 'sans-serif'],
+        'poppins': ['var(--font-poppins)', 'sans-serif'],
+        'roboto': ['var(--font-roboto)', 'sans-serif'],
+      },
       colors: {
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",

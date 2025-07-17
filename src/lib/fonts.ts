@@ -1,4 +1,4 @@
-import { Raleway, Poppins, Libre_Baskerville, Inter } from "next/font/google";
+import { Raleway, Poppins, Libre_Baskerville, Inter , Playball } from "next/font/google";
 
 export const raleway = Raleway({
 	variable: "--font-raleway",
@@ -18,6 +18,13 @@ export const libreBaskerville = Libre_Baskerville({
 	subsets: ["latin", "latin-ext"],
 	style: ["italic"],
 	weight: ["400", "700"],
+});
+
+
+export const playball = Playball({
+	variable: "--font-playball",
+	subsets: ["latin", "latin-ext"],
+	weight: ["400"],
 });
 
 export const inter = Inter({
