@@ -1,5 +1,6 @@
 import Doctors from "@/app/components/home/Doctors";
 import DoctorsHero from "@/app/components/home/DoctorsPage/DoctorsHero";
+import Education from "@/app/components/home/DoctorsPage/Education";
 import Statistics from "@/app/components/home/DoctorsPage/Statistics";
 import Gallery from "@/app/components/home/Gallery";
 
@@ -16,6 +17,7 @@ export default function Home() {
 			<DoctorsHero />
 			<Doctors />
 			<Statistics />
+			<Education />
 			<Gallery />
 		</>
 	);
