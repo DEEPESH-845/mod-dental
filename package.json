@@ -20,6 +20,7 @@
     "framer-motion": "^12.22.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.515.0",
+    "motion": "^12.23.3",
     "next": "15.3.3",
     "radix-ui": "^1.4.2",
     "react": "^19.1.0",
