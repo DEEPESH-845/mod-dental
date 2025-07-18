@@ -5,10 +5,13 @@ import "./globals.css";
 import type { Metadata } from "next"
 import Footer from "./components/home/Footer";
 import GetInTouch from "./components/home/GetInTouch";
-import Navbar from "./components/home/Navbar";
-import AppointmentForm from "./components/home/Appointment-Form";
+import AppointmentForm from "./components/home/Appointment-Form
 // import TestimonialSection from "./components/home/Testimonials";
 import Testimonial2Section from "./components/home/Testimonial2";
+import NavBar from "./components/home/Navbar";
+import { playball } from '@/lib/fonts';
+import { cn } from '@/lib/utils';
+
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -58,16 +61,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   return (
     <html lang="en" >
       <head></head>
-      <body className="bg-base-200 overflow-x-hidden min-h-screen pt-32" suppressHydrationWarning>
-         <Navbar/>
+      <body className={cn(
+        "bg-base-200 overflow-x-hidden min-h-screen pt-32",
+        playball.variable,
+        "antialiased"
+      )}>
+         <NavBar/>
+           
         <div className="relative">{children}</div>
         {/* <TestimonialSection/> */}
         <Testimonial2Section />
         <AppointmentForm/>
-        <GetInTouch/>
+        <GetInTouch />
         <Footer/>
       </body>
     </html>

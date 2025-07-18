@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --font-playball: 'Playball', cursive;
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
 @theme {
     --color-dental-green: #2C4F3C;
     --color-dental-cream: #F3EFE9; 
