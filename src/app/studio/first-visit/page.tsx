@@ -1,3 +1,4 @@
+import FirstAppointment from "@/app/components/home/FirstVisitGuide/FirstAppointment";
 import FirstVisitHero from "@/app/components/home/FirstVisitGuide/FirstVisitHero";
 import type { Metadata } from "next";
 
@@ -11,6 +12,7 @@ const page = () => {
 	return (
 		<>
 			<FirstVisitHero />
+			<FirstAppointment />
 		</>
 	);
 };
