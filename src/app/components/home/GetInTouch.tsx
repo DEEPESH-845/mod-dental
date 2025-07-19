@@ -1,6 +1,6 @@
 "use client";
 
-import GoogleMap from "./GoogleMap";
+import GoogleMap from "@/app/components/common/google-map";
 
 export default function GetInTouch() {
 	return (
