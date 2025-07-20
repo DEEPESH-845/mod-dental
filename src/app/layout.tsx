@@ -7,8 +7,7 @@ import AppointmentForm from "./components/home/Appointment-Form";
 // import TestimonialSection from "./components/home/Testimonials";
 import Testimonial2Section from "./components/home/Testimonial2";
 import NavBar from "./components/home/Navbar";
-import { cn } from "@/lib/utils";
-import { playball } from "@/lib/fonts";
+import LenisProvider from "./components/home/LenisProvider";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -61,21 +60,17 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head></head>
-			<body
-				className={cn(
-					"bg-base-200 overflow-x-hidden min-h-screen pt-32",
-					playball.variable,
-					"antialiased"
-				)}
-			>
-				<NavBar />
+			<body className="bg-base-200 overflow-x-hidden min-h-screen pt-32 antialiased">
+				<LenisProvider>
+					<NavBar />
 
-				<div className="relative">{children}</div>
-				{/* <TestimonialSection/> */}
-				<Testimonial2Section />
-				<AppointmentForm />
-				<GetInTouch />
-				<Footer />
+					<div className="relative">{children}</div>
+					{/* <TestimonialSection/> */}
+					<Testimonial2Section />
+					<AppointmentForm />
+					<GetInTouch />
+					<Footer />
+				</LenisProvider>
 			</body>
 		</html>
 	);
