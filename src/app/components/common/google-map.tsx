@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <div>
     <GoogleMapsEmbed
-      apiKey="AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+      apiKey=""
       height={700}
       width={700}
       mode="place"
