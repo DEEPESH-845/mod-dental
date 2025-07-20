@@ -13,7 +13,8 @@ export default function LenisProvider({ children }: LenisProviderProps) {
 			root
 			options={{
 				lerp: 0.1,
-				duration: 3,
+				duration: 5, // Duration of the scroll animation
+				smoothWheel: true, // Enable smooth scrolling with the mouse wheel
 				syncTouch: false, // Correct touch option
 				syncTouchLerp: 0.075, // Touch inertia lerp
 				touchInertiaExponent: 1.7, // Touch inertia strength
