@@ -8,13 +8,7 @@ import AppointmentForm from "./components/home/Appointment-Form";
 import Testimonial2Section from "./components/home/Testimonial2";
 import NavBar from "./components/home/Navbar";
 import { cn } from "@/lib/utils";
-import {
-	raleway,
-	poppins,
-	libreBaskerville,
-	inter,
-	playball,
-} from "@/lib/fonts";
+import { playball } from "@/lib/fonts";
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
@@ -71,7 +65,7 @@ export default function RootLayout({
 				className={cn(
 					"bg-base-200 overflow-x-hidden min-h-screen pt-32",
 					playball.variable,
-					"antialiased"
+					"antialiased",
 				)}
 			>
 				<NavBar />
