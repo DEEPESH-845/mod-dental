@@ -1,14 +1,17 @@
-
-import type { Metadata } from 'next'
- 
+import PatientHero from "@/app/components/home/PatientForm/PatientHero";
+import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: 'Patients',
-  description: 'For our patients, we provide comprehensive dental care and personalized treatment plans to ensure optimal oral health and a beautiful smile.',}
-export default function Page() {
-  return (
-    <>
-      <h1>Patient Page</h1>
-      <p>Welcome</p>
-    </>
-  );
-}
+	title: "Patient Forms",
+	description:
+		"Access and complete your patient forms online for a smooth and efficient visit to MOD Dental. Our patient portal allows you to fill out necessary documents at your convenience, ensuring a streamlined check-in process.",
+};
+
+const page = () => {
+	return (
+		<>
+			<PatientHero />
+		</>
+	);
+};
+
+export default page;

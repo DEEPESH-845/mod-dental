@@ -12,6 +12,7 @@ const FinanceHero = () => {
 					alt="Dental care products including toothbrushes, soap, and dropper bottle"
 					fill
 					className="object-cover"
+					quality={100}
 					priority
 				/>
 				{/* Dark overlay filter */}

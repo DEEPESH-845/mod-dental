@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { Check } from "lucide-react";
 import Image from "next/image";
-import { Button } from "../ui/Button";
+import { Button } from "../../ui/Button";
 import { raleway, poppins, libreBaskerville } from "@/lib/fonts";
 
 const FirstAppointment = () => {

@@ -1,6 +1,6 @@
-import FirstAppointment from "@/app/components/home/FirstVisitGuide/FirstAppointment";
-import FirstVisitHero from "@/app/components/home/FirstVisitGuide/FirstVisitHero";
-import PreparingForVisit from "@/app/components/home/FirstVisitGuide/PreparingYourVisit";
+import FirstAppointment from "@/app/components/home/Studio/FirstVisitGuide/FirstAppointment";
+import FirstVisitHero from "@/app/components/home/Studio/FirstVisitGuide/FirstVisitHero";
+import PreparingForVisit from "@/app/components/home/Studio/FirstVisitGuide/PreparingYourVisit";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

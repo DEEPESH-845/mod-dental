@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { Button } from "@/app/components/home/ui/Button";
-import { raleway, poppins, libreBaskerville } from "@/lib/fonts";
+import { raleway, poppins, metal } from "@/lib/fonts";
 
-const DoctorsHero = () => {
+const PatientHero = () => {
 	return (
 		<div className="relative min-h-screen w-full overflow-hidden">
 			{/* Background Image with Dark Overlay */}
 			<div className="absolute inset-0">
 				<Image
-					src="/assets/images/DoctorsHero.png"
+					src="/assets/images/PatientForm.png"
 					alt="Dental care products including toothbrushes, soap, and dropper bottle"
 					fill
 					className="object-cover"
@@ -25,32 +25,31 @@ const DoctorsHero = () => {
 					<div className={"max-w-2xl" + " " + raleway.className}>
 						{/* Main Heading */}
 						<h1 className="mb-4 text-6xl font-light text-white sm:text-7xl lg:text-8xl xl:text-8xl">
-							Meet
+							Patient
 							<br />
-							Our Doctors
+							Forms{" "}
 						</h1>
 
 						{/* Tagline */}
 						<h2
-							className={`py-6 text-2xl font-light italic text-white/90 sm:text-4xl lg:text-4xl ${libreBaskerville.className}`}
+							className={`py-6 text-2xl font-light italic text-white/90 sm:text-4xl lg:text-4xl ${metal.className}`}
 						>
-							Caring Hands behind every Smile
+							Skip the Paperwork, not the Care.
 						</h2>
 
 						{/* Description */}
 						<p
 							className={
-								"my-8 max-w-2xl text-sm font-light text-white/80 sm:text-base lg:text-lg" +
+								"my-5 max-w-2xl text-sm font-light text-white/80 sm:text-base lg:text-lg" +
 								" " +
 								poppins.className
 							}
 						>
-							At MOD Dentist in Houston our doctors aren’t just experts in
-							dental care, they’re passionate smile makers who truly care about
-							you. From the moment you walk in you’ll feel the difference with
-							gentle hands listening hearts and a team that treats you like
-							family. We believe every smile has a story and we’re here to make
-							yours shine one comfortable confident visit at a time
+							We&apos;ve made it easy for you to complete your patient forms
+							online—before you even step into our clinic. Our secure digital
+							forms are quick, convenient, and help us prepare for your
+							personalized care in advance. Everything you need is just a few
+							clicks away.
 						</p>
 
 						{/* CTA Button */}
@@ -71,4 +70,4 @@ const DoctorsHero = () => {
 	);
 };
 
-export default DoctorsHero;
+export default PatientHero;

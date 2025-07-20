@@ -1,4 +1,4 @@
-import FinanceHero from "@/app/components/home/Finance/Hero";
+import FinanceHero from "@/app/components/home/Studio/Finance/Hero";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "Finance",
