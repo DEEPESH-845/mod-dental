@@ -7,8 +7,10 @@ import AppointmentForm from "./components/home/Appointment-Form";
 // import TestimonialSection from "./components/home/Testimonials";
 import Testimonial2Section from "./components/home/Testimonial2";
 import NavBar from "./components/home/Navbar";
+
 import { cn } from "@/lib/utils";
 import { playball } from "@/lib/fonts";
+
 
 // This metadata is used for the entire application
 // It can be overridden by individual pages
