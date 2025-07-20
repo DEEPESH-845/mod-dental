@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/app/components/home/ui/Button";
 import { libreBaskerville, poppins } from "@/lib/fonts";
 import preventiveDentistryImg from "@/../public/assets/PreventiveDenstistry.png";
+import whitevelvet from "@/../public/assets/images/White_velvet.png";
 
 export default function PreventiveDentistrySection() {
 	return (
@@ -9,7 +10,7 @@ export default function PreventiveDentistrySection() {
 			{/* White Velvet Background */}
 			<div className="absolute inset-0">
 				<Image
-					src="/assets/White_Velvet.png"
+					src={whitevelvet}
 					alt="White velvet background"
 					fill
 					className="object-cover"
