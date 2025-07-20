@@ -65,7 +65,7 @@ export default function RootLayout({
 				className={cn(
 					"bg-base-200 overflow-x-hidden min-h-screen pt-32",
 					playball.variable,
-					"antialiased",
+					"antialiased"
 				)}
 			>
 				<NavBar />

@@ -1,4 +1,4 @@
-import { Raleway, Poppins, Libre_Baskerville, Inter , Playball } from "next/font/google";
+import { Raleway, Poppins, Libre_Baskerville, Inter , Playball , Metal } from "next/font/google";
 
 export const raleway = Raleway({
 	variable: "--font-raleway",
@@ -33,3 +33,9 @@ export const inter = Inter({
 	style: ["normal", "italic"],
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
+ export const metal = Metal({
+      weight: '400', // Specify the desired weight, e.g., '400', '700', or '400 700' for a range
+      subsets: ['latin'], // Specify the subsets you need
+      display: 'swap',
+    });
