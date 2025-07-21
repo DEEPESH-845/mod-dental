@@ -2,13 +2,13 @@ import Image from "next/image";
 import { Button } from "@/app/components/home/ui/Button";
 import { raleway, poppins, libreBaskerville } from "@/lib/fonts";
 
-const DoctorsHero = () => {
+const FirstVisitHero = () => {
 	return (
 		<div className="relative min-h-screen w-full overflow-hidden">
 			{/* Background Image with Dark Overlay */}
 			<div className="absolute inset-0">
 				<Image
-					src="/assets/images/DoctorsHero.png"
+					src="/assets/images/FirstHero.png"
 					alt="Dental care products including toothbrushes, soap, and dropper bottle"
 					fill
 					className="object-cover"
@@ -25,16 +25,16 @@ const DoctorsHero = () => {
 					<div className={"max-w-2xl" + " " + raleway.className}>
 						{/* Main Heading */}
 						<h1 className="mb-4 text-6xl font-light text-white sm:text-7xl lg:text-8xl xl:text-8xl">
-							Meet
+							First
 							<br />
-							Our Doctors
+							Visit Guide
 						</h1>
 
 						{/* Tagline */}
 						<h2
 							className={`py-6 text-2xl font-light italic text-white/90 sm:text-4xl lg:text-4xl ${libreBaskerville.className}`}
 						>
-							Caring Hands behind every Smile
+							Thoughtful , Personalized & Seamless
 						</h2>
 
 						{/* Description */}
@@ -45,12 +45,13 @@ const DoctorsHero = () => {
 								poppins.className
 							}
 						>
-							At MOD Dentist in Houston our doctors aren’t just experts in
-							dental care, they’re passionate smile makers who truly care about
-							you. From the moment you walk in you’ll feel the difference with
-							gentle hands listening hearts and a team that treats you like
-							family. We believe every smile has a story and we’re here to make
-							yours shine one comfortable confident visit at a time
+							We know that visiting a new dental office can feel unfamiliar, but
+							from the moment you step through our doors, everything is designed
+							to make you feel comfortable, cared for, and confident in your
+							decision. At MOD Dentistry, we don’t just treat teeth, we care for
+							people. Your first visit is where our relationship begins, and
+							we’re here to listen, understand, and support your goals for a
+							healthier, more radiant smile.
 						</p>
 
 						{/* CTA Button */}
@@ -71,4 +72,4 @@ const DoctorsHero = () => {
 	);
 };
 
-export default DoctorsHero;
+export default FirstVisitHero;

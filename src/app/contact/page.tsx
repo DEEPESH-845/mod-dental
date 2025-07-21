@@ -9,6 +9,7 @@ import {
 	Facebook,
 	Linkedin,
 	LucideTwitter,
+	Phone,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -22,8 +23,8 @@ import talkingWomen from "@/../public/assets/images/talking_women.png";
 import indiaFlag from "@/../public/assets/images/india-flag.png";
 import ringerVolume from "@/../public/assets/Ringer Volume.svg";
 import placeMarker from "@/../public/assets/Place Marker.svg";
-import officeView from "@/../public/assets/images/office_view.png"
-import { libreBaskerville, poppins, raleway } from "@/lib/fonts";
+import officeView from "@/../public/assets/images/office_view.png";
+import { libreBaskerville, metal, poppins, raleway } from "@/lib/fonts";
 
 export default function ContactForm() {
 	return (
@@ -52,7 +53,7 @@ export default function ContactForm() {
 						</div>
 
 						{/* Main Image */}
-						<div className="my-8">
+						<div className="my-6 p-7">
 							<div className="rounded-lg">
 								<Image
 									src={talkingWomen}
@@ -65,10 +66,10 @@ export default function ContactForm() {
 						</div>
 
 						{/* Contact Information */}
-						<div className={"space-y-4 mb-8 w-full " + poppins.className}>
+						<div className={"space-y-4 spac mb-8 w-full " + poppins.className}>
 							{/* First Row - Phone and Email */}
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-								<div className="flex items-center space-x-3 bg-gray-300/30 bg-opacity-50 p-3 py-5 rounded-sm w-full">
+							<div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+								<div className="flex items-center space-x-4 bg-gray-300/30 bg-opacity-50 p-3 py-5  rounded-sm w-full">
 									<Image
 										src={ringerVolume}
 										alt="Phone icon"
@@ -76,15 +77,10 @@ export default function ContactForm() {
 										height={30}
 										className="flex-shrink-0"
 									/>
-									<span className="whitespace-nowrap">
-										+1 (832) 762-5635
-									</span>
+									<span className="whitespace-nowrap">+1 (832) 762-5635</span>
 								</div>
 								<div className="flex items-center space-x-3 bg-gray-300/30 bg-opacity-50 py-5 p-3 rounded-sm w-full">
-									<Mail
-										strokeWidth={2}
-										className="w-7 h-7 flex-shrink-0"
-									/>
+									<Mail strokeWidth={2} className="w-7 h-7 flex-shrink-0" />
 									<span className="whitespace-nowrap">
 										moddentist@gmail.com
 									</span>
@@ -112,9 +108,7 @@ export default function ContactForm() {
 							{/* Header with horizontal lines */}
 							<div className="flex items-center justify-center mb-5">
 								<div className="flex-grow border-t border-gray-400 mx-12"></div>
-								<p className="font-light text-gray-300">
-									Connect with us on
-								</p>
+								<p className="font-light text-gray-300">Connect with us on</p>
 								<div className="flex-grow border-t border-gray-400 mx-12"></div>
 							</div>
 
@@ -132,8 +126,7 @@ export default function ContactForm() {
 								</div>
 								<div className="w-10 h-10 bg-[#B6A66A] rounded-full flex items-center justify-center">
 									<span className="text-white">
-										<LucideTwitter />{" "}
-										{/* Replace with the actual X icon */}
+										<LucideTwitter /> {/* Replace with the actual X icon */}
 									</span>
 								</div>
 							</div>
@@ -143,12 +136,13 @@ export default function ContactForm() {
 
 				{/* Right Section - White Velvet Background */}
 				<div
-					className="w-1/2 p-8 relative"
+					className="w-1/2 p-8 relative  "
 					style={{
 						backgroundImage: `url(${WhiteVelvet.src})`,
 						backgroundSize: "cover",
-						backgroundPosition: "center",
 						backgroundRepeat: "no-repeat",
+						filter: "brightness(1.1)",
+						objectPosition: "left",
 					}}
 				>
 					<div>
@@ -175,12 +169,10 @@ export default function ContactForm() {
 									<label
 										htmlFor="firstName"
 										className={
-											"block text-sm mb-2 text-gray-500 " +
-											poppins.className
+											"block text-sm mb-2 text-gray-500 " + poppins.className
 										}
 									>
-										First Name{" "}
-										<span className="text-[#B6A66A]">*</span>
+										First Name <span className="text-[#B6A66A]">*</span>
 									</label>
 									<Input
 										type="text"
@@ -195,12 +187,10 @@ export default function ContactForm() {
 									<label
 										htmlFor="lastName"
 										className={
-											"block text-sm mb-2 text-gray-500 " +
-											poppins.className
+											"block text-sm mb-2 text-gray-500 " + poppins.className
 										}
 									>
-										Last Name{" "}
-										<span className="text-[#B6A66A]">*</span>
+										Last Name <span className="text-[#B6A66A]">*</span>
 									</label>
 									<Input
 										type="text"
@@ -215,12 +205,10 @@ export default function ContactForm() {
 								<label
 									htmlFor="phone"
 									className={
-										"block text-sm mb-2 text-gray-500 " +
-										poppins.className
+										"block text-sm mb-2 text-gray-500 " + poppins.className
 									}
 								>
-									Phone Number{" "}
-									<span className="text-[#B6A66A]">*</span>
+									Phone Number <span className="text-[#B6A66A]">*</span>
 								</label>
 								<div className="relative">
 									<div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center">
@@ -251,8 +239,7 @@ export default function ContactForm() {
 								<label
 									htmlFor="email"
 									className={
-										"block text-sm mb-2 text-gray-500 " +
-										poppins.className
+										"block text-sm mb-2 text-gray-500 " + poppins.className
 									}
 								>
 									Email <span className="text-[#B6A66A]">*</span>
@@ -272,8 +259,7 @@ export default function ContactForm() {
 								<label
 									htmlFor="message"
 									className={
-										"block text-sm mb-2 text-gray-500 " +
-										poppins.className
+										"block text-sm mb-2 text-gray-500 " + poppins.className
 									}
 								>
 									Message
@@ -300,15 +286,19 @@ export default function ContactForm() {
 					</div>
 				</div>
 			</div>
-			<div className={"min-h-screen bg-[#F5F2ED] " + `${raleway.className}`}>
+			<div className={`min-h-screen bg-[#B6A66A]" ${raleway.className}`}>
 				{/* Hero Section */}
 				<div className="px-6 py-16 text-center">
 					<div className="max-w-7xl mx-auto">
-						<h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-700 leading-tight mb-8">
+						<h1
+							className={
+								"text-4xl md:text-5xl lg:text-6xl font-light text-gray-700 leading-tight mb-8"
+							}
+						>
 							Your Journey
 							<br />
 							to a{" "}
-							<span className="italic text-[#B6A76A] font-[400]">
+							<span className={`${metal.className} text-[#B6A76A] font-[400]`}>
 								Healthier Smile
 							</span>{" "}
 							starts here
@@ -317,13 +307,12 @@ export default function ContactForm() {
 						<p
 							className={`${poppins.className} text-gray-600 text-base md:text-lg leading-relaxed mb-12`}
 						>
-							Step into MOD Dental, where advanced care meets
-							personalized attention. From your first visit to every
-							follow-up, we are here to make your smile shine brighter.
-							Reach out today and begin your journey toward comfort,
-							confidence and lifelong dental health. Our modern clinic is
-							designed to make you feel relaxed, welcomed, and truly
-							cared for.
+							Step into MOD Dental, where advanced care meets personalized
+							attention. From your first visit to every follow-up, we are here
+							to make your smile shine brighter. Reach out today and begin your
+							journey toward comfort, confidence and lifelong dental health. Our
+							modern clinic is designed to make you feel relaxed, welcomed, and
+							truly cared for.
 						</p>
 
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -334,23 +323,25 @@ export default function ContactForm() {
 							</Button>
 							<Button
 								variant="outline"
-								className={`border-2 border-[#2C4F3C] text-[#2C4F3C] ${poppins.className} font-[400] px-7 py-6 text-sm tracking-wider hover:bg-gray-50 transition-colors rounded-sm`}
+								className="bg-white text-gray-700 border-[#2C4F3C] hover:bg-[#284836] hover:text-white px-7 py-6 text-sm font-medium tracking-wide duration-300 transition-colors"
 							>
-								CALL +1 (832) 702-8636
+								<Phone className="w-4 h-4 mr-2" />
+								CALL +1 (832) 762 5635
 							</Button>
 						</div>
 					</div>
 				</div>
 
 				{/* Office Image Section */}
-				<div className="">
-					<div className="">
+				<div className="min-h-screen ">
+					<div className=" mx-auto px-1 py-3">
 						<div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg">
 							<Image
 								src={officeView}
 								alt="Modern dental office interior with arched alcove, mirrors, and contemporary design"
 								fill
-								className="object-cover"
+								quality={100}
+								className="object-fill"
 								priority
 							/>
 						</div>
@@ -358,7 +349,7 @@ export default function ContactForm() {
 				</div>
 
 				{/* Bottom spacing */}
-				<div className="h-16"></div>
+				<div className="h-6"></div>
 			</div>
 		</>
 	);
