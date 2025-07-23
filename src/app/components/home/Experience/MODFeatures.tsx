@@ -59,7 +59,7 @@ export default function MODFeatures() {
 					fill
 					quality={1}
 					style={{ objectPosition: "left" }}
-					className="object-cover"
+					className="object-cover opacity-50"
 					priority
 				/>
 			</div>
