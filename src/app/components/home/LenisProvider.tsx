@@ -12,16 +12,18 @@ export default function LenisProvider({ children }: LenisProviderProps) {
 		<ReactLenis
 			root
 			options={{
-				lerp: 0.05,
-				duration: 5, // Duration of the scroll animation
-				smoothWheel: true, // Enable smooth scrolling with the mouse wheel
-				syncTouch: true, // Correct touch option
-				syncTouchLerp: 0.075, // Touch inertia lerp
-				touchInertiaExponent: 1, // Touch inertia strength
-				touchMultiplier: 1, // Touch event multiplier
-				wheelMultiplier: 1,
+				lerp: 0.1, // Faster interpolation for responsiveness
+				duration: 2, // Shorter duration for snappier feel
+				smoothWheel: true, // Desktop smooth scrolling
+				syncTouch: true, // Sync touch events properly
+				syncTouchLerp: 0.12, // Faster touch sync
+				touchMultiplier: 2.5, // Enhanced touch sensitivity for premium feel
+				wheelMultiplier: 0.7, // Slightly faster wheel
 				gestureOrientation: "vertical",
 				autoRaf: true,
+				infinite: false,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
+				prevent: (node) => node.classList.contains("no-lenis"),
 			}}
 		>
 			{children}
