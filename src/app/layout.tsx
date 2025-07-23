@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Footer from "./components/home/Footer";
 import GetInTouch from "./components/home/GetInTouch";
-import AppointmentForm from "./components/home/Appointment-Form";
+import AppointmentForm from "./components/common/Appointment-Form";
 // import TestimonialSection from "./components/home/Testimonials";
 import Testimonial2Section from "./components/home/Testimonial2";
 import NavBar from "./components/home/Navbar";
