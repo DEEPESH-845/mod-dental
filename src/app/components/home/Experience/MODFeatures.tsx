@@ -6,6 +6,8 @@ import {
 	Users,
 	Armchair,
 } from "lucide-react";
+import Image from "next/image";
+import whitevelvet from "@/../public/assets/images/White_velvet.png";
 
 const features = [
 	{
@@ -46,10 +48,23 @@ const features = [
 	},
 ];
 
-export default function Features() {
+export default function MODFeatures() {
 	return (
-		<section id="features" className="py-20 bg-[#F6F1E9]">
-			<div className="container mx-auto px-4">
+		<section id="features" className=" relative py-20 bg-white">
+			{/* White Velvet Background */}
+			<div className="absolute inset-0">
+				<Image
+					src={whitevelvet}
+					alt="White velvet background"
+					fill
+					quality={1}
+					style={{ objectPosition: "left" }}
+					className="object-cover"
+					priority
+				/>
+			</div>
+
+			<div className="relative z-10 container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-12">
 					<h2 className="text-4xl lg:text-5xl font-light text-[#2C4F3C] mb-4">
@@ -62,7 +77,6 @@ export default function Features() {
 					</p>
 				</div>
 
-				{/* Features Grid */}
 				{/* Features Grid */}
 				<div className="grid md:grid-cols-2 lg:grid-cols-3">
 					{features.map((feature, index) => (
