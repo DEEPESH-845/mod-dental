@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ExperienceHero from "../components/home/Experience/ExperienceHero";
+import MoreThanDentistryHome from "../components/home/Experience/MoreThanDentistry";
 
 export const metadata: Metadata = {
 	title: "Our experience",
@@ -11,6 +12,7 @@ export default function Page() {
 	return (
 		<>
 			<ExperienceHero />
+			<MoreThanDentistryHome />
 		</>
 	);
 }
