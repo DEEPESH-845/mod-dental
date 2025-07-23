@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/app/components/home/ui/Button";
 import { raleway, poppins, metal } from "@/lib/fonts";
+import Link from "next/link";
 
 const FinanceHero = () => {
 	return (
@@ -56,15 +57,17 @@ const FinanceHero = () => {
 
 						{/* CTA Button */}
 
-						<Button
-							className={
-								"bg-[#2C4F3C] border-1 border-[#2C4F3C] text-white hover:bg-[#5e9c5c] hover:border-[#24a05b] px-4 py-3 text-sm font-light uppercase tracking-wider transition-colors  sm:px-5 sm:py-7 sm:text-base rounded-sm" +
-								" " +
-								poppins.className
-							}
-						>
-							Request an Appointment
-						</Button>
+						<Link href={"/appointment-form"} passHref>
+							<Button
+								className={
+									"bg-[#2C4F3C] border-1 border-[#2C4F3C] text-white hover:bg-[#5e9c5c] hover:border-[#24a05b] px-4 py-3 text-sm font-light uppercase tracking-wider transition-colors  sm:px-5 sm:py-7 sm:text-base rounded-sm" +
+									" " +
+									poppins.className
+								}
+							>
+								Request an Appointment
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>

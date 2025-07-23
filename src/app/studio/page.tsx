@@ -11,6 +11,8 @@ import firstvisitguide from "@/../public/assets/images/firstvisitguide.png";
 import insurance from "@/../public/assets/images/insurance.png";
 import patientform from "@/../public/assets/images/patientform.png";
 import FeelLikeHome from "../components/home/Studio/FeelLikeHome";
+import Link from "next/link";
+import { poppins } from "@/lib/fonts";
 
 export const metadata: Metadata = {
 	title: "studio",
@@ -97,35 +99,35 @@ export default function DentalStudioHero() {
 								style={{ fontFamily: "Poppins, sans-serif" }}
 							>
 								<p>
-									Our studio is thoughtfully designed to feel more like
-									a retreat than a dental office. From calming colors
-									to a clean, modern layout, every detail is meant to
-									help you relax, feel at home and know you&apos;re in
-									good hands.
+									Our studio is thoughtfully designed to feel more like a
+									retreat than a dental office. From calming colors to a clean,
+									modern layout, every detail is meant to help you relax, feel
+									at home and know you&apos;re in good hands.
 								</p>
 								<p>
-									It&apos;s a space where comfort, care, and beautiful
-									smiles come together.
+									It&apos;s a space where comfort, care, and beautiful smiles
+									come together.
 								</p>
 							</div>
 
-							{/* CTA Button */}
-							<Button
-								className="bg-[#2C4F3CE8] px-8 py-4 text-sm font-[400] uppercase tracking-wider text-white hover:bg-[#2C4F3C] focus:bg-[#2C4F3C] lg:px-7 lg:py-7 cursor-pointer"
-								style={{ fontFamily: "Poppins, sans-serif" }}
-							>
-								REQUEST AN APPOINTMENT
-							</Button>
+							<Link href={"/appointment-form"} passHref>
+								<Button
+									className={
+										"bg-[#2C4F3C] border-1 border-[#2C4F3C] text-white hover:bg-[#5e9c5c] hover:border-[#24a05b] px-4 py-3 text-sm font-light uppercase tracking-wider transition-colors  sm:px-5 sm:py-7 sm:text-base rounded-sm" +
+										" " +
+										poppins.className
+									}
+								>
+									Request an Appointment
+								</Button>
+							</Link>
 						</div>
 					</div>
 				</div>
 			</div>
 			<FeelLikeHome />
 			{studioCardsData.map((card, index) => (
-				<StudioGuide
-					key={index * 23}
-					{...card}
-				/>
+				<StudioGuide key={index * 23} {...card} />
 			))}
 		</>
 	);

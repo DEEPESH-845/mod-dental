@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/app/components/home/ui/Button";
 import { raleway, poppins, libreBaskerville } from "@/lib/fonts";
+import Link from "next/link";
 
 export default function ServiceHero() {
 	return (
@@ -44,23 +45,25 @@ export default function ServiceHero() {
 								poppins.className
 							}
 						>
-							At MOD Dentist in Houston, we believe preventive care is
-							the key to a healthy smile. With good daily habits and
-							regular cleanings, we help you avoid cavities, gum disease,
-							and bigger dental problems before they start.
+							At MOD Dentist in Houston, we believe preventive care is the key
+							to a healthy smile. With good daily habits and regular cleanings,
+							we help you avoid cavities, gum disease, and bigger dental
+							problems before they start.
 						</p>
 
 						{/* CTA Button */}
-                    
-						<Button
-							className={
-								"bg-[#2C4F3C] border-1 border-[#2C4F3C] text-white hover:bg-[#5e9c5c] hover:border-[#24a05b] px-4 py-3 text-sm font-light uppercase tracking-wider transition-colors  sm:px-5 sm:py-7 sm:text-base rounded-sm" +
-								" " +
-								poppins.className
-							}
-						>
-							Request an Appointment
-						</Button>
+
+						<Link href={"/appointment-form"} passHref>
+							<Button
+								className={
+									"bg-[#2C4F3C] border-1 border-[#2C4F3C] text-white hover:bg-[#5e9c5c] hover:border-[#24a05b] px-4 py-3 text-sm font-light uppercase tracking-wider transition-colors  sm:px-5 sm:py-7 sm:text-base rounded-sm" +
+									" " +
+									poppins.className
+								}
+							>
+								Request an Appointment
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>
