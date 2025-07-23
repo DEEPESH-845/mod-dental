@@ -28,12 +28,8 @@ export default function Doctors() {
 					src="/assets/images/White_velvet.png"
 					alt="Green velvet background"
 					fill
-					className="object-cover"
-					quality={1}
-					style={{ objectPosition: "right" }}
-					placeholder="blur"
-					blurDataURL="/assets/images/White_velvet.png"
-					sizes="100vw"
+					className="object-cover opacity-50"
+					style={{ objectPosition: "left" }}
 					priority
 				/>
 			</div>
